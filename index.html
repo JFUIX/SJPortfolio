@@ -185,22 +185,50 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 }
 @media(max-width:360px){.hero-studio h1{font-size:15.5vw}.hero-studio h1 .headline-folder{width:.55em;margin-left:7px}.hero-studio .hero-portrait{height:410px}}
 
+
+/* Center-stage editorial hero: photo foreground, type behind and in front */
+.hero-depth{display:block!important;max-width:1400px!important;padding-top:10px!important;padding-bottom:32px!important;min-height:0!important}
+.hero-depth-stage{position:relative;isolation:isolate;min-height:740px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 55%,rgba(224,209,187,.45),transparent 68%);perspective:1100px}
+.hero-depth-back{position:absolute;z-index:0;inset:10% 0 auto;display:flex;flex-direction:column;text-align:center;font:900 clamp(90px,15vw,225px)/.77 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.045em;color:var(--pur);opacity:.12;pointer-events:none;animation:depth-back-in 1.2s ease both}
+.hero-depth .hero-figure{position:absolute!important;z-index:2;left:50%;bottom:0;transform:translateX(-50%);width:min(53%,540px)!important;max-width:none!important;margin:0!important;pointer-events:none}
+.hero-depth .hero-portrait{display:block;width:100%!important;height:690px!important;object-fit:contain!important;object-position:center bottom!important;background:none!important;border-radius:0!important;filter:drop-shadow(0 24px 25px rgba(40,20,16,.13))!important;animation:portrait-enter 1.15s cubic-bezier(.18,.7,.22,1) both}
+.hero-depth .hero-copy{position:relative;z-index:3;width:100%;padding:80px 0 35px!important;text-align:center;display:flex;flex-direction:column;align-items:center;pointer-events:none}
+.hero-depth .hero-script{font-size:clamp(45px,5vw,72px)!important;margin:0 0 12px!important;transform:translateX(-27vw)}
+.hero-depth .hero-intro{margin:0 0 17px!important;letter-spacing:.16em!important}
+.hero-depth h1{width:100%;font-size:clamp(68px,11.1vw,152px)!important;line-height:.9!important;letter-spacing:-.038em!important;text-align:center;filter:drop-shadow(0 5px 7px rgba(246,240,231,.65));}
+.hero-depth h1 .hero-word{display:block!important;animation:depth-word-in 1s cubic-bezier(.16,1,.3,1) both;transform-origin:center}
+.hero-depth h1 .hero-word:nth-child(2){animation-delay:.17s}
+.hero-depth h1 .headline-folder{width:.43em!important;margin-left:.02em!important;vertical-align:middle!important}
+.hero-depth .hero-description{margin:230px 0 14px!important;max-width:550px!important;padding:8px 16px;border-radius:6px;background:color-mix(in srgb,var(--bg) 90%,transparent);font-size:15px!important;line-height:1.65!important}
+.hero-depth .hero-actions,.hero-depth .hero-channels{pointer-events:auto;justify-content:center}
+.hero-depth .hero-actions{margin-top:5px}
+.hero-depth .hero-channels{margin-top:18px!important}
+@keyframes depth-word-in{from{opacity:0;transform:translateY(38px) scale(.94);filter:blur(7px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes depth-back-in{from{opacity:0;transform:translateY(28px)}to{opacity:.12;transform:translateY(0)}}
+@keyframes portrait-enter{from{opacity:0;transform:translateY(28px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(min-width:701px){.hero-depth h1 .hero-word:first-child{transform:translateX(-21%)}.hero-depth h1 .hero-word:nth-child(2){transform:translateX(20%)}.hero-depth h1 .hero-word:first-child{animation-name:depth-word-left}.hero-depth h1 .hero-word:nth-child(2){animation-name:depth-word-right}@keyframes depth-word-left{from{opacity:0;transform:translate(-21%,35px);filter:blur(6px)}to{opacity:1;transform:translate(-21%,0);filter:blur(0)}}@keyframes depth-word-right{from{opacity:0;transform:translate(20%,35px);filter:blur(6px)}to{opacity:1;transform:translate(20%,0);filter:blur(0)}}}
+@media(max-width:700px){.hero-depth{padding-top:0!important}.hero-depth-stage{min-height:790px;overflow:hidden}.hero-depth .hero-figure{width:min(100%,410px)!important;bottom:118px}.hero-depth .hero-portrait{height:560px!important}.hero-depth .hero-copy{padding:34px 0!important;align-self:stretch;justify-content:flex-start;min-height:790px}.hero-depth .hero-script{font-size:46px!important;transform:none}.hero-depth .hero-intro{font-size:9px!important}.hero-depth h1{font-size:clamp(54px,13.2vw,90px)!important;margin-top:8px}.hero-depth .hero-description{margin:auto 0 12px!important;max-width:100%!important;font-size:13px!important}.hero-depth .hero-actions{gap:12px}.hero-depth .hero-channels{font-size:9px!important}.hero-depth-back{top:24%;font-size:24vw;opacity:.08}}
+@media(max-width:390px){.hero-depth-stage,.hero-depth .hero-copy{min-height:730px}.hero-depth .hero-figure{bottom:125px}.hero-depth .hero-portrait{height:510px!important}.hero-depth h1{font-size:12.6vw!important}}
+@media(prefers-reduced-motion:reduce){.hero-depth *{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <header class="w"><nav><a class="logo" href="#">seren<b>✳︎</b></a><div class="nl"><a href="#work">Selected work</a><a href="#what">What we do</a><a href="#approach">The approach</a></div><a class="btn" href="#contact">Let’s talk growth ↗</a></nav></header>
 
 <main>
-<section class="hero hero-studio w" aria-labelledby="hero-heading">
-<div class="hero-copy">
-<p class="hero-script">Portfolio</p>
-<p class="tag hero-intro">Digital marketing. Big brand energy.</p>
-<h1 id="hero-heading"><span class="hero-word">DIGITAL</span><span class="hero-word">MARKETING<span class="headline-folder" aria-hidden="true"><svg viewBox="0 0 100 78" fill="none"><path d="M5 17a7 7 0 0 1 7-7h29l11 11h36a7 7 0 0 1 7 7v42H5Z" fill="currentColor" opacity=".65"/><rect x="5" y="26" width="90" height="46" rx="5" fill="currentColor"/><path d="m72 48 5 26 7-8 10 10 5-5-10-9 10-5Z" fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5"/></svg></span></span></h1>
-<p class="hero-description">We make content people stop for. Ads people click. And websites that turn visitors into customers.</p>
-<div class="row hero-actions"><a class="btn" href="#contact">Grow my brand ↗</a><a class="lnk" href="#work">Show me the work ↓</a></div>
-<div class="hero-channels" aria-label="Marketing services"><span>Social media</span><span>Paid ads</span><span>SEO & websites</span></div>
-</div>
-<figure class="hero-figure"><img class="hero-portrait" src="assets/seren-cutout.png" alt="Seren's digital marketing creative, full seated portrait holding a laptop" width="1024" height="1536" fetchpriority="high" decoding="async"></figure>
+<section class="hero hero-studio w hero-depth" aria-labelledby="hero-heading">
+  <div class="hero-depth-stage">
+    <div class="hero-depth-back" aria-hidden="true"><span>CREATIVE</span><span>IMPACT.</span></div>
+    <figure class="hero-figure"><img class="hero-portrait" src="assets/seren-cutout.png" alt="Creative professional seated in a chrome chair, holding a laptop" width="1024" height="1536" fetchpriority="high" decoding="async"></figure>
+    <div class="hero-copy">
+      <p class="hero-script">Portfolio</p>
+      <p class="tag hero-intro">Digital marketing. Big brand energy.</p>
+      <h1 id="hero-heading"><span class="hero-word">DIGITAL</span><span class="hero-word">MARKETING<span class="headline-folder" aria-hidden="true"><svg viewBox="0 0 100 78" fill="none"><path d="M5 17a7 7 0 0 1 7-7h29l11 11h36a7 7 0 0 1 7 7v42H5Z" fill="currentColor" opacity=".65"/><rect x="5" y="26" width="90" height="46" rx="5" fill="currentColor"/><path d="m72 48 5 26 7-8 10 10 5-5-10-9 10-5Z" fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5"/></svg></span></span></h1>
+      <p class="hero-description">We make content people stop for. Ads people click. And websites that turn visitors into customers.</p>
+      <div class="row hero-actions"><a class="btn" href="#contact">Grow my brand ↗</a><a class="lnk" href="#work">Show me the work ↓</a></div>
+      <div class="hero-channels" aria-label="Marketing services"><span>Social media</span><span>Paid ads</span><span>SEO &amp; websites</span></div>
+    </div>
+  </div>
 </section>
 <div class="mq" aria-hidden="true"><div><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span></div></div>
 
