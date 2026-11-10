@@ -210,6 +210,14 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 @media(max-width:700px){.hero-depth{padding-top:0!important}.hero-depth-stage{min-height:790px;overflow:hidden}.hero-depth .hero-figure{width:min(100%,410px)!important;bottom:118px}.hero-depth .hero-portrait{height:560px!important}.hero-depth .hero-copy{padding:34px 0!important;align-self:stretch;justify-content:flex-start;min-height:790px}.hero-depth .hero-script{font-size:46px!important;transform:none}.hero-depth .hero-intro{font-size:9px!important}.hero-depth h1{font-size:clamp(54px,13.2vw,90px)!important;margin-top:8px}.hero-depth .hero-description{margin:auto 0 12px!important;max-width:100%!important;font-size:13px!important}.hero-depth .hero-actions{gap:12px}.hero-depth .hero-channels{font-size:9px!important}.hero-depth-back{top:24%;font-size:24vw;opacity:.08}}
 @media(max-width:390px){.hero-depth-stage,.hero-depth .hero-copy{min-height:730px}.hero-depth .hero-figure{bottom:125px}.hero-depth .hero-portrait{height:510px!important}.hero-depth h1{font-size:12.6vw!important}}
 @media(prefers-reduced-motion:reduce){.hero-depth *{animation:none!important;transition:none!important}}
+
+/* Keep the subject's face and silhouette above the headline */
+.hero-depth .hero-copy{z-index:auto!important}
+.hero-depth h1{position:absolute;z-index:1;left:0;right:0;top:165px;pointer-events:none}
+.hero-depth .hero-figure{z-index:2!important}
+.hero-depth .hero-script,.hero-depth .hero-intro,.hero-depth .hero-description,.hero-depth .hero-actions,.hero-depth .hero-channels{position:relative;z-index:3}
+.hero-depth .hero-description{margin-top:485px!important}
+@media(max-width:700px){.hero-depth h1{top:126px}.hero-depth .hero-description{margin-top:auto!important}.hero-depth .hero-figure{z-index:2!important}}
 </style>
 </head>
 <body>
