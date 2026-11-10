@@ -233,6 +233,14 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 .hero-depth h1 .hero-word:first-child{z-index:1!important}
 .hero-depth h1 .hero-word:nth-child(2){z-index:5!important}
 .hero-depth .hero-figure{z-index:2!important}
+
+/* Readable editorial depth: two clearly separated planes, never covering the face. */
+.hero-depth h1{top:118px!important;font-size:clamp(62px,10.2vw,144px)!important;line-height:1!important;letter-spacing:-.045em!important;overflow:visible!important;text-shadow:none!important;z-index:auto!important}
+.hero-depth h1 .hero-word:first-child{z-index:1!important;font-size:1.06em!important;transform:none!important;color:var(--ink)!important;opacity:.92}
+.hero-depth h1 .hero-word:nth-child(2){z-index:6!important;font-size:.83em!important;transform:none!important;top:205px!important;color:#3e0b10!important;-webkit-text-stroke:1px #3e0b10;text-shadow:0 2px 0 #f6f0e7,0 5px 14px rgba(246,240,231,.9),0 9px 24px rgba(62,11,16,.2)!important}
+.hero-depth .hero-figure{z-index:2!important}
+@media(max-width:700px){.hero-depth h1{top:115px!important;font-size:clamp(45px,10.3vw,78px)!important}.hero-depth h1 .hero-word:nth-child(2){top:185px!important;font-size:.9em!important;-webkit-text-stroke:.4px #3e0b10}}
+@media(max-width:390px){.hero-depth h1{font-size:10.4vw!important}.hero-depth h1 .hero-word:nth-child(2){top:165px!important}}
 </style>
 <link rel="preload" as="image" href="./assets/seren-cutout.png">
 </head>
