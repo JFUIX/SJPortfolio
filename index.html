@@ -218,6 +218,14 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 .hero-depth .hero-script,.hero-depth .hero-intro,.hero-depth .hero-description,.hero-depth .hero-actions,.hero-depth .hero-channels{position:relative;z-index:3}
 .hero-depth .hero-description{margin-top:485px!important}
 @media(max-width:700px){.hero-depth h1{top:126px}.hero-depth .hero-description{margin-top:auto!important}.hero-depth .hero-figure{z-index:2!important}}
+
+/* Stronger editorial headline: oversized type remains behind the portrait for depth. */
+.hero-depth h1{font-size:clamp(86px,12.5vw,184px)!important;line-height:.82!important;letter-spacing:-.055em!important;font-weight:900!important;color:var(--ink)!important;text-shadow:0 2px 0 rgba(246,240,231,.24),0 10px 24px rgba(62,11,16,.12);filter:none!important;top:135px}
+.hero-depth h1 .hero-word{font-weight:900!important;white-space:nowrap}
+.hero-depth h1 .hero-word:first-child{transform:translateX(-13%)}
+.hero-depth h1 .hero-word:nth-child(2){transform:translateX(13%)}
+@media(max-width:700px){.hero-depth h1{font-size:clamp(53px,13vw,92px)!important;top:126px;letter-spacing:-.06em!important}.hero-depth h1 .hero-word:first-child{transform:translateX(-6%)}.hero-depth h1 .hero-word:nth-child(2){transform:translateX(6%)}}
+@media(max-width:390px){.hero-depth h1{font-size:12.8vw!important}}
 </style>
 <link rel="preload" as="image" href="./assets/seren-cutout.png">
 </head>
