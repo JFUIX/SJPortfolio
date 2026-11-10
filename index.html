@@ -155,6 +155,36 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 @media(max-width:360px){.w{padding-left:24px;padding-right:24px}.hero-studio h1{font-size:16.5vw}.hero-studio h1 .headline-star{display:none}.hero-actions{gap:15px}.hero-actions .lnk{font-size:11px}.cta .em{font-size:14px}.ph{font-size:16px;padding:14px}.ph2{font-size:29px;padding:12px}}
 @media(prefers-reduced-motion:reduce){.hero-studio *{animation:none!important;transition:none!important}}
 
+
+/* Seamless cutout hero, inspired by the supplied portfolio reference */
+.hero-studio{max-width:1200px;min-height:620px;padding-top:22px;padding-bottom:28px;grid-template-columns:1.2fr 1fr;gap:30px}
+.hero-copy{padding-top:12px;padding-bottom:12px}
+.hero-studio .hero-script{font-size:clamp(54px,5.3vw,72px);margin-bottom:9px;line-height:.9}
+.hero-studio .hero-intro{font-size:9px;margin:14px 0 13px}
+.hero-studio h1{font-size:clamp(70px,7.5vw,100px);line-height:.89}
+.hero-studio h1 .hero-word{overflow:visible}
+.hero-studio h1 .headline-folder{display:inline-block;background:none;color:var(--pur);padding:0;margin:0 0 0 12px;transform:rotate(3deg);width:.66em;line-height:0;vertical-align:baseline}
+.headline-folder svg{width:100%;height:auto;overflow:visible}
+.hero-studio p.hero-description{font-size:15px;line-height:1.75;max-width:400px;margin:25px 0 22px}
+.hero-actions{gap:22px}.hero-actions .btn{padding:14px 20px;font-size:13px}.hero-actions .lnk{font-size:13px}
+.hero-channels{margin-top:24px;font-size:10px}
+.hero-figure{max-width:410px;margin:0;justify-self:end;align-self:center;background:none}
+.hero-studio .hero-portrait{height:560px;width:100%;object-fit:contain;object-position:center;background:none;border-radius:0;filter:none}
+@media(max-width:1000px) and (min-width:701px){.hero-studio{min-height:540px;gap:20px}.hero-studio h1{font-size:7.3vw}.hero-studio .hero-portrait{height:480px}.hero-studio p.hero-description{font-size:14px}.hero-studio h1 .headline-folder{margin-left:7px;width:.61em}}
+@media(max-width:700px){
+.hero-studio{min-height:0;grid-template-columns:minmax(0,1fr);padding-top:38px;padding-bottom:36px;gap:25px}
+.hero-copy{padding:0}.hero-studio .hero-script{font-size:55px;margin-bottom:8px}
+.hero-studio .hero-intro{margin-top:15px;font-size:9px}
+.hero-studio h1{font-size:clamp(57px,13vw,88px);line-height:.9}
+.hero-studio h1 .headline-folder{width:.6em;margin-left:9px}
+.hero-studio p.hero-description{font-size:16px;margin:22px 0;max-width:100%}
+.hero-actions{gap:18px}.hero-actions .btn{font-size:13px}.hero-actions .lnk{font-size:12px}
+.hero-channels{font-size:10px;margin-top:23px}
+.hero-figure{justify-self:center;width:100%;max-width:320px}
+.hero-studio .hero-portrait{height:460px;aspect-ratio:auto;object-fit:contain;background:none;border-radius:0}
+}
+@media(max-width:360px){.hero-studio h1{font-size:15.5vw}.hero-studio h1 .headline-folder{width:.55em;margin-left:7px}.hero-studio .hero-portrait{height:410px}}
+
 </style>
 </head>
 <body>
@@ -165,12 +195,12 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 <div class="hero-copy">
 <p class="hero-script">Portfolio</p>
 <p class="tag hero-intro">Digital marketing. Big brand energy.</p>
-<h1 id="hero-heading"><span class="hero-word">DIGITAL</span><span class="hero-word">MARKETING<span class="headline-star" aria-hidden="true">✳︎</span></span></h1>
+<h1 id="hero-heading"><span class="hero-word">DIGITAL</span><span class="hero-word">MARKETING<span class="headline-folder" aria-hidden="true"><svg viewBox="0 0 100 78" fill="none"><path d="M5 17a7 7 0 0 1 7-7h29l11 11h36a7 7 0 0 1 7 7v42H5Z" fill="currentColor" opacity=".65"/><rect x="5" y="26" width="90" height="46" rx="5" fill="currentColor"/><path d="m72 48 5 26 7-8 10 10 5-5-10-9 10-5Z" fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5"/></svg></span></span></h1>
 <p class="hero-description">We make content people stop for. Ads people click. And websites that turn visitors into customers.</p>
 <div class="row hero-actions"><a class="btn" href="#contact">Grow my brand ↗</a><a class="lnk" href="#work">Show me the work ↓</a></div>
 <div class="hero-channels" aria-label="Marketing services"><span>Social media</span><span>Paid ads</span><span>SEO & websites</span></div>
 </div>
-<figure class="hero-figure"><img class="hero-portrait" src="assets/seren-hero.png" alt="Seren's digital marketing creative, full seated portrait holding a laptop" width="1024" height="1536" fetchpriority="high" decoding="async"><figcaption>CREATIVE THINKING. REAL BUSINESS IMPACT.</figcaption></figure>
+<figure class="hero-figure"><img class="hero-portrait" src="assets/seren-cutout.png" alt="Seren's digital marketing creative, full seated portrait holding a laptop" width="1024" height="1536" fetchpriority="high" decoding="async"></figure>
 </section>
 <div class="mq" aria-hidden="true"><div><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span></div></div>
 
