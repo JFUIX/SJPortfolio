@@ -301,6 +301,13 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 .hero-depth .hero-description{max-width:580px!important;line-height:1.6!important}
 @media(max-width:900px){.hero-depth h1{font-size:10.1vw!important;letter-spacing:.01em!important}.hero-depth h1 .hero-word{letter-spacing:.01em!important}}
 @media(max-width:700px){.hero.hero-depth.w{padding-left:10px!important;padding-right:10px!important}.hero-depth h1{font-size:10vw!important;top:140px!important}.hero-depth h1 .hero-word{letter-spacing:.006em!important}.hero-depth .hero-description{max-width:92%!important}}
+
+/* Layer MARKETING over Seren while DIGITAL remains behind, without changing placement. */
+.hero-depth .hero-copy{z-index:auto!important;isolation:auto!important}
+.hero-depth h1{z-index:auto!important;isolation:auto!important}
+.hero-depth h1 .hero-word:first-child{position:relative!important;z-index:1!important}
+.hero-depth h1 .hero-word:nth-child(2){position:relative!important;z-index:5!important}
+.hero-depth .hero-figure{z-index:2!important}
 </style>
 <link rel="preload" as="image" href="./assets/seren-cutout.png">
 </head>
