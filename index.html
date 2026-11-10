@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Seren – Digital marketing. Big brand energy.</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f6f0e7;--ink:#3e0b10;--mut:#7a5a52;--line:#d8cbb8;--card:#ebe1d2;--lime:#9c2d17;--hot:#e8643e;--lav:#e0d1bb;--pur:#a3341b;--peach:#b5401f;--sky:#4a0e13;--dk:#170f0e;--dkt:#f6f0e7;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -78,61 +78,108 @@ footer .logo{font-size:28px}
 .stat b,.nums b,.price,.ph,.ph2,.svc h3,.steps h3,.q p,summary{font-family:'Inter Tight','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:-.04em}
 @media(max-width:860px){.hero,.big,.two,.app,.cta .g{grid-template-columns:1fr}.nums,.steps{grid-template-columns:1fr 1fr}.nl{display:none}.svc{grid-template-columns:40px 1fr}.svc p{grid-column:2}.svc span{display:none}section{padding:64px 0}.fm{grid-template-columns:1fr}}
 
-/* Photo-led editorial hero */
-.hero-photo{position:relative;isolation:isolate;display:block;max-width:none;min-height:740px;padding:0;background:#dfbea4;overflow:hidden;color:#3e0b10}
-.hero-portrait{position:absolute;inset:0 0 0 auto;width:64%;height:100%;object-fit:cover;object-position:50% 37%;z-index:-3}
-.hero-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#f0d9c3 0%,#f0d9c3 32%,#f0d9c3ed 41%,#f0d9c37a 52%,#f0d9c300 65%)}
-.hero-inner{display:flex;align-items:center;min-height:740px;padding-top:65px;padding-bottom:65px}
-.hero-copy{width:57%;position:relative}
-.hero-photo .tag{color:#66382e;max-width:none;font-size:11px}
-.hero-photo h1{font-size:clamp(64px,8.1vw,112px);line-height:.94;letter-spacing:-.055em}
-.hero-photo h1 .hero-line{display:block;overflow:hidden;background:none;color:inherit;transform:none;padding:0 0 .08em;margin:0}
-.hero-line>span,.hero-line>em{display:block;background:none!important;color:inherit!important;padding:0!important;transform:none;margin:0!important;animation:hero-rise .95s cubic-bezier(.2,.75,.2,1) both}
-.hero-line:nth-child(2)>span{animation-delay:.13s}.hero-line:nth-child(3)>em{animation-delay:.26s;color:#9c2d17!important}
-.hero-photo p.hero-description{color:#623c32;font-size:18px;line-height:1.65;max-width:365px;margin:22px 0 28px}
-.hero-intro,.hero-description,.hero-actions,.hero-note{animation:hero-fade .8s ease both}
-.hero-intro{animation-delay:.05s}.hero-description{animation-delay:.45s}.hero-actions{animation-delay:.57s}
-.hero-photo p.hero-note{margin:30px 0 0;font-size:10px;animation-delay:.7s}
-.hero-photo .btn{background:#3e0b10;color:#f6f0e7;transition:background .2s,transform .2s}.hero-photo .btn:hover{background:#9c2d17;transform:translateY(-2px)}
-.hero-photo .lnk{color:#3e0b10}
-@keyframes hero-rise{from{opacity:0;transform:translateY(110%) rotate(2deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
-@keyframes hero-fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:1000px) and (min-width:701px){.hero-photo,.hero-inner{min-height:680px}.hero-copy{width:62%}.hero-photo h1{font-size:9vw}.hero-portrait{width:65%;object-position:50% 35%}}
-@media(max-width:700px){
-.hero-photo{min-height:920px}.hero-portrait{width:100%;height:700px;object-position:50% 30%}
-.hero-shade{background:linear-gradient(180deg,#efd7c000 0%,#efd7c000 30%,#efd7c0b3 46%,#efd7c0 65%,#efd7c0 100%)}
-.hero-inner{min-height:920px;align-items:flex-end;padding-top:370px;padding-bottom:38px}
-.hero-copy{width:100%}.hero-photo h1{font-size:clamp(60px,13vw,84px);letter-spacing:-.05em}
-.hero-photo .tag{font-size:9px;margin:0 0 15px}.hero-photo p.hero-description{font-size:16px;max-width:360px;margin:16px 0 22px}
-.hero-photo .row{gap:22px}.hero-photo .btn{padding:15px 20px}.hero-photo .lnk{font-size:13px}
-.hero-photo p.hero-note{font-size:9px;margin-top:25px}
+
+/* Reference-inspired editorial hero and comfortable responsive spacing */
+html{scroll-padding-top:24px}
+.w{width:100%;max-width:1280px;padding-left:clamp(28px,5vw,64px);padding-right:clamp(28px,5vw,64px)}
+header.w{padding-top:0;padding-bottom:0}
+nav{padding:26px 0;gap:24px;border-bottom:1px solid var(--line)}
+.logo{text-decoration:none;white-space:nowrap}.logo b{color:var(--pur)}
+.nl{gap:28px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+.btn{border-radius:3px;min-height:48px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.hero-studio{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:35px;padding-top:30px;padding-bottom:42px;min-height:660px;color:var(--ink)}
+.hero-copy{min-width:0;position:relative;padding:25px 0}
+.hero-studio .hero-script{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(52px,5.5vw,75px);line-height:1;color:var(--pur);margin:0 0 22px;max-width:none;animation:soft-enter .85s ease both}
+.hero-studio .hero-intro{font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--mut);margin:0 0 15px;max-width:none}
+.hero-studio h1{font-family:'Barlow Condensed','Impact',sans-serif;font-weight:800;font-size:clamp(70px,8.2vw,112px);line-height:.87;letter-spacing:-.025em}
+.hero-studio h1 .hero-word{display:block;background:none;color:inherit;padding:0;margin:0;transform:none;animation:headline-enter .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-studio h1 .hero-word:nth-child(2){animation-delay:.12s}
+.hero-studio h1 .headline-star{background:none;padding:0;display:inline-block;font-family:'Inter',sans-serif;color:var(--pur);font-size:.44em;vertical-align:middle;margin-left:10px;transform:rotate(12deg)}
+.hero-studio p.hero-description{max-width:420px;font-size:17px;line-height:1.75;color:var(--mut);margin:26px 0}
+.hero-actions{gap:24px;animation:soft-enter .8s .3s ease both}
+.hero-channels{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:30px;font-size:11px;font-weight:600;color:var(--mut)}
+.hero-channels span{display:inline-flex;align-items:center;gap:7px}.hero-channels span:before{content:'✦';color:var(--pur);font-size:13px}
+.hero-figure{margin:0;min-width:0;position:relative;justify-self:center;width:100%;max-width:430px}
+.hero-studio .hero-portrait{display:block;position:static;width:100%;height:600px;object-fit:contain;object-position:center;z-index:auto;border-radius:210px 210px 20px 20px;background:#e0bda3}
+.hero-figure figcaption{font-size:9px;letter-spacing:.14em;text-align:center;margin-top:16px;color:var(--mut)}
+.currency-note{font-size:11px;display:inline-block;line-height:1.6;max-width:350px;margin-top:8px}
+.price{font-size:clamp(35px,4vw,48px)}
+section{padding-top:88px;padding-bottom:88px}
+.big,.two,.app,.steps,.nums,.cta .g,.fm{min-width:0}
+.big>*,.two>*,.app>*,.steps>*,.nums>*,.cta .g>*,.fm>*{min-width:0}
+.pic{padding:24px}.pic div{max-width:100%;font-size:clamp(23px,3vw,32px)}
+.cta .em{overflow-wrap:anywhere}.fm input,.fm select,.fm textarea{min-width:0;max-width:100%;font-size:16px}
+summary{line-height:1.4}summary:after{flex-shrink:0}
+@keyframes headline-enter{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes soft-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1000px) and (min-width:701px){
+.hero-studio{gap:20px;grid-template-columns:1.1fr 1fr;min-height:580px}
+.hero-studio h1{font-size:8.7vw}.hero-studio .hero-portrait{height:510px}
+.hero-studio p.hero-description{font-size:16px}.nl{gap:17px;font-size:10px}.hero-actions{gap:17px}.hero-actions .btn{padding:14px 18px}
 }
-@media(prefers-reduced-motion:reduce){.hero-photo *, .hero-photo *::before{animation:none!important;transition:none!important}}
+@media(max-width:700px){
+.w{padding-left:28px;padding-right:28px}
+nav{padding:20px 0;gap:16px}.logo{font-size:30px}nav>.btn{font-size:11px;padding:12px 15px;min-height:44px}.nl{display:none}
+.hero-studio{grid-template-columns:1fr;min-height:0;gap:28px;padding-top:38px;padding-bottom:40px}
+.hero-copy{padding:0}.hero-studio .hero-script{font-size:53px;margin-bottom:20px}
+.hero-studio .hero-intro{font-size:9px;letter-spacing:.09em;margin-bottom:14px}
+.hero-studio h1{font-size:clamp(61px,13.1vw,88px);line-height:.9;letter-spacing:-.025em}
+.hero-studio h1 .headline-star{margin-left:6px;font-size:.38em}
+.hero-studio p.hero-description{font-size:16px;line-height:1.75;margin:23px 0;max-width:100%}
+.hero-actions{gap:18px}.hero-actions .btn{padding:14px 18px;font-size:13px}.hero-actions .lnk{font-size:12px}
+.hero-channels{font-size:10px;gap:10px 15px;margin-top:24px}
+.hero-figure{max-width:340px;width:100%;margin:0 auto}
+.hero-studio .hero-portrait{height:auto;aspect-ratio:2/3;object-fit:contain;border-radius:160px 160px 16px 16px}
+.hero-figure figcaption{font-size:8px;line-height:1.6;margin-top:14px}
+section{padding-top:60px;padding-bottom:60px}
+h2{font-size:clamp(34px,9vw,47px);line-height:1.02;letter-spacing:-.04em}
+.top{gap:22px;margin-bottom:32px;align-items:start}.top p{max-width:100%;font-size:15px;line-height:1.75}
+.tag{font-size:10px;line-height:1.6}
+.nums{grid-template-columns:1fr;gap:26px}.nums b{font-size:52px;padding-top:22px;margin-bottom:10px}.nums span{font-size:14px;line-height:1.75;max-width:100%}
+.big,.two,.app,.cta .g{grid-template-columns:1fr}.big .l{min-height:290px}.big .r{padding:26px 22px;gap:15px}.big h3{font-size:29px;line-height:1.12}
+.big .r>p{line-height:1.75}.big .r .tag{font-size:9px}
+.price{font-size:36px;line-height:1.15}.currency-note{font-size:10px}
+.two{gap:34px}.two h3{font-size:24px;line-height:1.15;margin-top:20px}.two p{font-size:14px;line-height:1.75}
+.pic{height:235px;padding:25px}.pic div{font-size:25px;padding:24px 20px;line-height:1.15}
+.svc{grid-template-columns:25px 1fr 16px;gap:10px 14px;padding:26px 0}.svc h3{font-size:23px;line-height:1.2}.svc p{grid-column:2;grid-row:2;font-size:14px;line-height:1.75;margin:0}.svc i:last-child{grid-column:3;grid-row:1}
+.app{gap:32px}.app p{font-size:15px;line-height:1.8}.mk h3{font-size:78px}.mk small{left:20px;right:15px;bottom:18px;font-size:8px}
+.steps{grid-template-columns:1fr;gap:26px}.steps div{padding-top:20px}.steps h3{font-size:23px;line-height:1.2}.steps p{font-size:14px;line-height:1.75}
+.q{padding:34px 23px}.q p{font-size:24px;line-height:1.4;letter-spacing:-.02em}.q small{font-size:11px;line-height:1.75;display:block}
+.w:has(>.q){padding-bottom:60px!important}
+details{padding:22px 0}summary{font-size:17px;gap:16px}details p{font-size:14px;line-height:1.8}
+.cta{padding:60px 0}.cta .g{gap:30px}.cta h2{font-size:42px;line-height:1.02}.cta p{font-size:15px;line-height:1.75}.cta .em{font-size:16px;line-height:1.6;margin-top:22px}
+.fm{grid-template-columns:minmax(0,1fr);padding:24px 20px;gap:22px}.fm label{font-size:11px;line-height:1.6}.fm .btn{font-size:13px;padding:15px 18px}.fm input,.fm select,.fm textarea{font-size:16px;padding:11px 0}
+footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .w>span:nth-child(2){flex-basis:100%}
+}
+@media(max-width:360px){.w{padding-left:24px;padding-right:24px}.hero-studio h1{font-size:16.5vw}.hero-studio h1 .headline-star{display:none}.hero-actions{gap:15px}.hero-actions .lnk{font-size:11px}.cta .em{font-size:14px}.ph{font-size:16px;padding:14px}.ph2{font-size:29px;padding:12px}}
+@media(prefers-reduced-motion:reduce){.hero-studio *{animation:none!important;transition:none!important}}
 
 </style>
 </head>
 <body>
-<header class="w"><nav><a class="logo" href="#">seren<b>✳</b></a><div class="nl"><a href="#work">Selected work</a><a href="#what">What we do</a><a href="#approach">The approach</a></div><a class="btn" href="#contact">Let’s talk growth ↗</a></nav></header>
+<header class="w"><nav><a class="logo" href="#">seren<b>✳︎</b></a><div class="nl"><a href="#work">Selected work</a><a href="#what">What we do</a><a href="#approach">The approach</a></div><a class="btn" href="#contact">Let’s talk growth ↗</a></nav></header>
 
 <main>
-<section class="hero hero-photo" aria-labelledby="hero-heading">
-<img class="hero-portrait" src="assets/seren-hero.png" alt="Seren's digital marketing creative seated with a laptop" fetchpriority="high" decoding="async">
-<div class="hero-shade" aria-hidden="true"></div>
-<div class="w hero-inner"><div class="hero-copy">
-<p class="tag hero-intro">● Digital marketing. Big brand energy.</p>
-<h1 id="hero-heading"><span class="hero-line"><span>Get seen.</span></span><span class="hero-line"><span>Get clicks.</span></span><span class="hero-line"><em>Get growing.</em></span></h1>
+<section class="hero hero-studio w" aria-labelledby="hero-heading">
+<div class="hero-copy">
+<p class="hero-script">Portfolio</p>
+<p class="tag hero-intro">Digital marketing. Big brand energy.</p>
+<h1 id="hero-heading"><span class="hero-word">DIGITAL</span><span class="hero-word">MARKETING<span class="headline-star" aria-hidden="true">✳︎</span></span></h1>
 <p class="hero-description">We make content people stop for. Ads people click. And websites that turn visitors into customers.</p>
 <div class="row hero-actions"><a class="btn" href="#contact">Grow my brand ↗</a><a class="lnk" href="#work">Show me the work ↓</a></div>
-<p class="tag hero-note">Social media. Paid ads. SEO. All working together.</p>
-</div></div></section>
+<div class="hero-channels" aria-label="Marketing services"><span>Social media</span><span>Paid ads</span><span>SEO & websites</span></div>
+</div>
+<figure class="hero-figure"><img class="hero-portrait" src="assets/seren-hero.png" alt="Seren's digital marketing creative, full seated portrait holding a laptop" width="1024" height="1536" fetchpriority="high" decoding="async"><figcaption>CREATIVE THINKING. REAL BUSINESS IMPACT.</figcaption></figure>
+</section>
 <div class="mq" aria-hidden="true"><div><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span></div></div>
 
 <section><div class="w"><p class="tag">The numbers behind the work</p>
 <div class="top"><h2>More than likes.<br><em>Real business.</em></h2><p>The goal is simple: more of the right people asking, booking and buying. Here’s what past projects delivered.</p></div>
-<div class="nums"><div><b>1,129</b><span>WhatsApp conversations for a visa consultancy at Rs38.07 per conversation.</span></div><div><b>~800</b><span>Orders in two months for a skincare brand through bundles, UGC and creator campaigns.</span></div><div><b>+40%</b><span>Organic traffic growth for a US home-remodeling business through SEO.</span></div></div></div></section>
+<div class="nums"><div><b>1,129</b><span>WhatsApp conversations for a visa consultancy at ≈$0.14 USD per conversation.</span></div><div><b>~800</b><span>Orders in two months for a skincare brand through bundles, UGC and creator campaigns.</span></div><div><b>+40%</b><span>Organic traffic growth for a US home-remodeling business through SEO.</span></div></div></div></section>
 
 <section id="work" style="padding-top:0"><div class="w"><div class="top"><div><p class="tag">01 / Selected work</p><h2>The work.<br><em>The impact.</em></h2></div><p>See the challenge, the plan and the result. No guesswork. Just a clear look at what went into the work.</p></div>
-<div class="big"><div class="l"><div class="ph">Big dreams. Clear next steps.</div><div class="ph2">1,129</div></div><div class="r"><p class="tag" style="margin:0">Lead generation / Meta ads / WhatsApp</p><h3>From form fills to real conversations.</h3><p style="color:var(--mut);font-size:14px;margin:0">A visa consultancy’s instant-form funnel rebuilt around a simpler next step: starting a conversation on WhatsApp.</p><div class="price">Rs38.07</div><small style="color:var(--mut)">per messaging conversation · June 2025</small><a class="lnk" href="#contact">Inside the campaign ↗</a></div></div>
+<div class="big"><div class="l"><div class="ph">Big dreams. Clear next steps.</div><div class="ph2">1,129</div></div><div class="r"><p class="tag" style="margin:0">Lead generation / Meta ads / WhatsApp</p><h3>From form fills to real conversations.</h3><p style="color:var(--mut);font-size:14px;margin:0">A visa consultancy’s instant-form funnel rebuilt around a simpler next step: starting a conversation on WhatsApp.</p><div class="price">≈$0.14 USD</div><small style="color:var(--mut)">per messaging conversation · June 2025<br><span class="currency-note">Approximate USD equivalent of PKR 38.07. Conversion: PKR 276.54 per USD, 10 Nov 2026.</span></small><a class="lnk" href="#contact">Inside the campaign ↗</a></div></div>
 <div class="two"><div><div class="pic" style="background:var(--peach)"><div>Your daily little ritual.</div></div><p class="tag" style="margin:16px 0 0">E-commerce / Creative / UGC</p><h3>Good content. Better bundles.</h3><p>Turning skincare discovery into orders with creator content, considered bundles and an 11/11 campaign.</p><a class="lnk" href="#contact">Explore the story ↗</a></div>
 <div><div class="pic" style="background:var(--sky)"><div>Better homes. Easier to find.</div></div><p class="tag" style="margin:16px 0 0">SEO / Content / Social media</p><h3>Building a stronger search presence.</h3><p>Helping a US remodeling business get discovered through keyword research, backlink work and a consistent social presence.</p><a class="lnk" href="#contact">See the approach ↗</a></div></div></div></section>
 
@@ -142,7 +189,7 @@ footer .logo{font-size:28px}
 <div class="svc"><i>03</i><h3>SEO &amp; websites</h3><p>Search visibility, WordPress sites, Shopify stores and landing pages with a clear next step.</p><i>↗</i></div>
 <div class="svc"><i>04</i><h3>Strategy &amp; automation</h3><p>Brand positioning, marketing audits, WhatsApp funnels and workflows that keep enquiries moving.</p><i>↗</i></div></div></section>
 
-<section id="approach"><div class="w"><div class="app"><div class="mk"><h3>Make<br>your<br>mark.</h3><small>THOUGHTFUL BY DESIGN. / SEREN ✳</small></div>
+<section id="approach"><div class="w"><div class="app"><div class="mk"><h3>Make<br>your<br>mark.</h3><small>THOUGHTFUL BY DESIGN. / SEREN ✳︎</small></div>
 <div><p class="tag">03 / The Seren approach</p><h2>Look good.<br><em>Work harder.</em></h2><p style="margin-top:24px">Seren helps brands stand out and win customers. We connect strong design, clear messaging and the right channels so your marketing works together.</p><p>The portfolio spans social media, performance marketing, SEO and creative support for brands across Pakistan, India, the US and Australia. From skincare launches to local service campaigns, the approach starts with understanding the business behind the brief.</p><p>You get a clear plan, content with a purpose and campaigns measured against your goals.</p><strong>Big ideas. Clear direction.</strong></div></div></div></section>
 
 <section style="padding-top:0"><div class="w"><div class="top"><div><p class="tag">From first hello to what’s next</p><h2>No confusion.<br><em>Here’s the plan.</em></h2></div></div>
@@ -156,14 +203,14 @@ footer .logo{font-size:28px}
 <details><summary>What does working together cost?</summary><p>It depends on scope. Tell us your goals and we’ll send a clear quote.</p></details>
 <details><summary>Can you guarantee the same results for my brand?</summary><p>No one can promise identical results. We can promise a clear plan, honest reporting and steady testing.</p></details></div></div></section>
 
-<section id="contact" class="cta"><div class="w g"><div><p class="tag" style="color:#f2b8a2">Your next chapter starts here</p><h2>Ready for your next big thing?</h2><p style="max-width:300px;margin-top:24px">Tell us what you do and what you want to grow. Let’s build a plan that fits your business.</p><a class="em" href="mailto:serenj.business@gmail.com">serenj.business@gmail.com ↗</a><a href="https://wa.me/918202008747" style="font-size:13px">Chat on WhatsApp · +1 820 200 8747 ↗</a></div>
+<section id="contact" class="cta"><div class="w g"><div><p class="tag" style="color:#f2b8a2">Your next chapter starts here</p><h2>Ready for your next big thing?</h2><p style="max-width:300px;margin-top:24px">Tell us what you do and what you want to grow. Let’s build a plan that fits your business.</p><a class="em" href="mailto:serenj.business@gmail.com">serenj.business@gmail.com ↗</a><a href="https://wa.me/18202008747" style="font-size:13px">Chat on WhatsApp · +1 820 200 8747 ↗</a></div>
 <div class="fm"><label>Your name *<input id="n" placeholder="Let’s get acquainted"></label><label>Your email *<input id="e" type="email" placeholder="you@yourbrand.com"></label>
 <label class="f">Business / website<input id="b" placeholder="Tell us who you are"></label>
 <label class="f">What can we help with?<select id="s"><option>Let’s figure it out together</option><option>Social &amp; content</option><option>Paid advertising</option><option>SEO &amp; websites</option><option>Strategy &amp; automation</option></select></label>
 <label class="f">What do you want to achieve? *<textarea id="m" rows="3" placeholder="Your goals, your challenge, your dream project…"></textarea></label>
 <button class="btn" id="go" type="button">Let’s get started <span>↗</span></button><small class="f" style="grid-column:1/-1;font-size:11px;color:#555">Opens a ready-to-send enquiry in your email app.</small></div></div></section>
 </main>
-<footer><div class="w"><span class="logo">seren<b style="color:var(--hot)">✳</b></span><span>© 2026 Seren. Thoughtful marketing. Meaningful growth.</span><a href="#work">Selected work ↗</a><a href="mailto:serenj.business@gmail.com">Say hello ↗</a><a href="#">Back to top ↑</a></div></footer>
+<footer><div class="w"><span class="logo">seren<b style="color:var(--hot)">✳︎</b></span><span>© 2026 Seren. Thoughtful marketing. Meaningful growth.</span><a href="#work">Selected work ↗</a><a href="mailto:serenj.business@gmail.com">Say hello ↗</a><a href="#">Back to top ↑</a></div></footer>
 <script>
 document.getElementById('go').onclick=function(){var v=function(i){return document.getElementById(i).value.trim()};
 if(!v('n')||!v('e')||!v('m')){alert('Please add your name, email and goals.');return}
