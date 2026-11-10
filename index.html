@@ -77,23 +77,54 @@ footer{background:var(--dk);color:var(--dkt);padding:30px 0;font-size:12px}foote
 footer .logo{font-size:28px}
 .stat b,.nums b,.price,.ph,.ph2,.svc h3,.steps h3,.q p,summary{font-family:'Inter Tight','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:-.04em}
 @media(max-width:860px){.hero,.big,.two,.app,.cta .g{grid-template-columns:1fr}.nums,.steps{grid-template-columns:1fr 1fr}.nl{display:none}.svc{grid-template-columns:40px 1fr}.svc p{grid-column:2}.svc span{display:none}section{padding:64px 0}.fm{grid-template-columns:1fr}}
+
+/* Photo-led editorial hero */
+.hero-photo{position:relative;isolation:isolate;display:block;max-width:none;min-height:740px;padding:0;background:#dfbea4;overflow:hidden;color:#3e0b10}
+.hero-portrait{position:absolute;inset:0 0 0 auto;width:64%;height:100%;object-fit:cover;object-position:50% 37%;z-index:-3}
+.hero-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#f0d9c3 0%,#f0d9c3 32%,#f0d9c3ed 41%,#f0d9c37a 52%,#f0d9c300 65%)}
+.hero-inner{display:flex;align-items:center;min-height:740px;padding-top:65px;padding-bottom:65px}
+.hero-copy{width:57%;position:relative}
+.hero-photo .tag{color:#66382e;max-width:none;font-size:11px}
+.hero-photo h1{font-size:clamp(64px,8.1vw,112px);line-height:.94;letter-spacing:-.055em}
+.hero-photo h1 .hero-line{display:block;overflow:hidden;background:none;color:inherit;transform:none;padding:0 0 .08em;margin:0}
+.hero-line>span,.hero-line>em{display:block;background:none!important;color:inherit!important;padding:0!important;transform:none;margin:0!important;animation:hero-rise .95s cubic-bezier(.2,.75,.2,1) both}
+.hero-line:nth-child(2)>span{animation-delay:.13s}.hero-line:nth-child(3)>em{animation-delay:.26s;color:#9c2d17!important}
+.hero-photo p.hero-description{color:#623c32;font-size:18px;line-height:1.65;max-width:365px;margin:22px 0 28px}
+.hero-intro,.hero-description,.hero-actions,.hero-note{animation:hero-fade .8s ease both}
+.hero-intro{animation-delay:.05s}.hero-description{animation-delay:.45s}.hero-actions{animation-delay:.57s}
+.hero-photo p.hero-note{margin:30px 0 0;font-size:10px;animation-delay:.7s}
+.hero-photo .btn{background:#3e0b10;color:#f6f0e7;transition:background .2s,transform .2s}.hero-photo .btn:hover{background:#9c2d17;transform:translateY(-2px)}
+.hero-photo .lnk{color:#3e0b10}
+@keyframes hero-rise{from{opacity:0;transform:translateY(110%) rotate(2deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
+@keyframes hero-fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1000px) and (min-width:701px){.hero-photo,.hero-inner{min-height:680px}.hero-copy{width:62%}.hero-photo h1{font-size:9vw}.hero-portrait{width:65%;object-position:50% 35%}}
+@media(max-width:700px){
+.hero-photo{min-height:920px}.hero-portrait{width:100%;height:700px;object-position:50% 30%}
+.hero-shade{background:linear-gradient(180deg,#efd7c000 0%,#efd7c000 30%,#efd7c0b3 46%,#efd7c0 65%,#efd7c0 100%)}
+.hero-inner{min-height:920px;align-items:flex-end;padding-top:370px;padding-bottom:38px}
+.hero-copy{width:100%}.hero-photo h1{font-size:clamp(60px,13vw,84px);letter-spacing:-.05em}
+.hero-photo .tag{font-size:9px;margin:0 0 15px}.hero-photo p.hero-description{font-size:16px;max-width:360px;margin:16px 0 22px}
+.hero-photo .row{gap:22px}.hero-photo .btn{padding:15px 20px}.hero-photo .lnk{font-size:13px}
+.hero-photo p.hero-note{font-size:9px;margin-top:25px}
+}
+@media(prefers-reduced-motion:reduce){.hero-photo *, .hero-photo *::before{animation:none!important;transition:none!important}}
+
 </style>
 </head>
 <body>
 <header class="w"><nav><a class="logo" href="#">seren<b>✳</b></a><div class="nl"><a href="#work">Selected work</a><a href="#what">What we do</a><a href="#approach">The approach</a></div><a class="btn" href="#contact">Let’s talk growth ↗</a></nav></header>
 
 <main>
-<div class="w hero">
-<div><p class="tag">● Digital marketing. Big brand energy.</p>
-<h1>Get seen.<br>Get clicks.<br><span>Get growing.</span></h1>
-<p>We make content people stop for. Ads people click. And websites that turn visitors into customers.</p>
-<div class="row"><a class="btn" href="#contact">Grow my brand ↗</a><a class="lnk" href="#work">Show me the work ↓</a></div>
-<p class="tag" style="margin-top:36px;font-size:10px">Social media. Paid ads. SEO. All working together.</p></div>
-<div class="art" role="img" aria-label="Illustrated campaign poster with a result card showing 1,129 WhatsApp conversations">
-<div class="blk"><small>SEREN // MAKE YOUR MARK</small><h3>Stop.<br>Look.<br><i>Click.</i></h3></div>
-<div class="stat"><small>Featured campaign result</small><b>1,129 ↗</b><small>WhatsApp conversations · Rs38.07 each</small><div class="bars"><i style="height:30%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:78%"></i><i style="height:100%"></i></div></div>
-<div class="stk">Strategy meets good taste ✦</div></div>
-</div>
+<section class="hero hero-photo" aria-labelledby="hero-heading">
+<img class="hero-portrait" src="assets/seren-hero.png" alt="Seren's digital marketing creative seated with a laptop" fetchpriority="high" decoding="async">
+<div class="hero-shade" aria-hidden="true"></div>
+<div class="w hero-inner"><div class="hero-copy">
+<p class="tag hero-intro">● Digital marketing. Big brand energy.</p>
+<h1 id="hero-heading"><span class="hero-line"><span>Get seen.</span></span><span class="hero-line"><span>Get clicks.</span></span><span class="hero-line"><em>Get growing.</em></span></h1>
+<p class="hero-description">We make content people stop for. Ads people click. And websites that turn visitors into customers.</p>
+<div class="row hero-actions"><a class="btn" href="#contact">Grow my brand ↗</a><a class="lnk" href="#work">Show me the work ↓</a></div>
+<p class="tag hero-note">Social media. Paid ads. SEO. All working together.</p>
+</div></div></section>
 <div class="mq" aria-hidden="true"><div><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span></div></div>
 
 <section><div class="w"><p class="tag">The numbers behind the work</p>
@@ -141,3 +172,4 @@ location.href='mailto:serenj.business@gmail.com?subject='+encodeURIComponent('Ne
 </script>
 </body>
 </html>
+
