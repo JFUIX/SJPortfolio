@@ -1212,6 +1212,15 @@ footer .logo b{color:#ed3c29!important}
  .sx-stage h1.sx-giant span.sx-signature{font-size:42px!important}
 }
 
+
+/* Tighten signature spacing under MARKETING without affecting other hero elements. */
+.sx-stage h1.sx-giant>.sx-signature,
+.sx-stage h1.sx-giant span.sx-signature{top:calc(100% - 4px)!important}
+@media(max-width:900px){
+ .sx-stage h1.sx-giant>.sx-signature,
+ .sx-stage h1.sx-giant span.sx-signature{top:calc(100% - 7px)!important}
+}
+
 </style>
 </head>
 <body id="top">
