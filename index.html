@@ -627,6 +627,27 @@ footer .logo b{color:#ed3c29!important}
  .steps{grid-template-columns:1fr}
 }
 
+
+/* Hero composition: full headline stays readable independently of portrait */
+.sx-giant{left:5%!important;right:auto!important;width:55%!important;max-width:55%!important;top:33%!important;text-align:left!important;z-index:7!important;font-size:clamp(64px,8vw,138px)!important;line-height:.93!important;white-space:normal!important}
+.sx-giant span,.sx-giant span+span{display:block!important;white-space:nowrap!important;font-size:.82em!important;letter-spacing:-.07em!important;margin:0!important}
+.sx-person{left:auto!important;right:1%!important;transform:none!important;width:45%!important;max-width:650px!important;height:91%!important;z-index:4!important;filter:none!important}
+.sx-title{z-index:8!important}
+.sx-info{z-index:9!important}
+@media(max-width:900px){
+ .sx-giant{top:34%!important;left:4%!important;width:60%!important;max-width:60%!important;font-size:clamp(58px,8.5vw,86px)!important}
+ .sx-person{width:52%!important;right:-6%!important}
+}
+@media(max-width:640px){
+ .sx-stage{height:690px!important}
+ .sx-giant{top:155px!important;left:18px!important;right:18px!important;width:calc(100% - 36px)!important;max-width:none!important;font-size:clamp(46px,12vw,76px)!important;text-align:left!important;z-index:7!important}
+ .sx-giant span,.sx-giant span+span{font-size:.8em!important;line-height:1.06!important}
+ .sx-person{left:auto!important;right:-13%!important;bottom:145px!important;width:83%!important;height:390px!important;transform:none!important;object-position:center bottom!important;z-index:4!important}
+ .sx-info{z-index:9!important}
+ .sx-foot{z-index:8!important}
+}
+@media(max-width:380px){.sx-giant{top:160px!important;font-size:12vw!important}.sx-person{height:355px!important;bottom:143px!important}}
+
 </style>
 </head>
 <body>
