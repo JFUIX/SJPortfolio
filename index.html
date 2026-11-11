@@ -1228,6 +1228,19 @@ footer .logo b{color:#ed3c29!important}
 .hero-await .sx-stage{visibility:hidden!important}
 .sx-stage{transition:none!important}
 
+
+/* Gentle double-blink attention cue on the floating WhatsApp CTA.
+   Two brief highlights per cycle, then a long calm pause. */
+@keyframes collaborateDoubleBlink{
+  0%,7%,14%,21%,100%{box-shadow:0 8px 30px rgba(0,0,0,.25);border-color:rgba(255,255,255,.18)}
+  3.5%,17.5%{box-shadow:0 8px 30px rgba(0,0,0,.25),0 0 0 4px rgba(237,60,41,.20);border-color:rgba(237,60,41,.55)}
+}
+@media(prefers-reduced-motion:no-preference){
+ .floating-project-cta{animation:collaborateDoubleBlink 9s ease-in-out infinite}
+ .floating-project-cta:hover,.floating-project-cta:focus-visible{animation-play-state:paused}
+}
+@media(prefers-reduced-motion:reduce){.floating-project-cta{animation:none!important}}
+
 </style>
 </head>
 <body id="top">
