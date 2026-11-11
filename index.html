@@ -998,6 +998,30 @@ footer .logo b{color:#ed3c29!important}
  .sx-stage .sx-person{height:340px!important;bottom:159px!important}
 }
 
+
+/* Portrait crop: scale up the subject and let the hero frame naturally hide her shoes. */
+@media(min-width:901px){
+ .sx-stage .sx-person{
+  height:112%!important;width:58%!important;max-width:780px!important;
+  bottom:-18%!important;object-fit:contain!important;object-position:center bottom!important;
+ }
+}
+@media(min-width:541px) and (max-width:900px){
+ .sx-stage .sx-person{
+  height:clamp(480px,75vw,680px)!important;width:min(96%,650px)!important;
+  bottom:65px!important;object-position:center bottom!important;
+ }
+}
+@media(max-width:540px){
+ .sx-stage .sx-person{
+  height:clamp(500px,145vw,680px)!important;width:125%!important;max-width:none!important;
+  bottom:45px!important;object-fit:contain!important;object-position:center bottom!important;
+ }
+}
+@media(max-width:380px){
+ .sx-stage .sx-person{height:510px!important;width:130%!important;bottom:35px!important}
+}
+
 </style>
 </head>
 <body id="top">
