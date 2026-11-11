@@ -676,6 +676,20 @@ footer .logo b{color:#ed3c29!important}
 :root[data-theme="dark"] .mk,:root[data-theme="light"] .mk{background:#174bc0!important}
 :root[data-theme="dark"] .mk h3,:root[data-theme="light"] .mk h3,:root[data-theme="dark"] .mk small,:root[data-theme="light"] .mk small{color:#fff!important}
 
+
+/* Four process cards — branded colors, accessible contrast, responsive grid */
+.steps{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:16px!important;border:0!important;align-items:stretch}
+.steps>div{min-width:0!important;padding:clamp(22px,2.4vw,34px)!important;min-height:250px;display:flex;flex-direction:column;gap:15px;border:0!important;border-radius:0!important;box-shadow:none}
+.steps>div:nth-child(1){background:#174bc0!important;color:#fff!important}
+.steps>div:nth-child(2){background:#ed3c29!important;color:#111!important}
+.steps>div:nth-child(3){background:#111!important;color:#fff!important}
+.steps>div:nth-child(4){background:#e4d6c5!important;color:#111!important}
+.steps>div small{font-family:Archivo,Arial,sans-serif!important;font-size:12px!important;line-height:1.5;font-weight:800!important;letter-spacing:.025em!important;color:inherit!important;opacity:.9}
+.steps>div h3{font-family:Archivo,Arial,sans-serif!important;font-size:clamp(21px,2vw,29px)!important;line-height:1.12!important;letter-spacing:-.05em!important;font-weight:900!important;color:inherit!important;margin:0!important}
+.steps>div p{font-size:clamp(13px,1.05vw,15px)!important;line-height:1.65!important;color:inherit!important;margin:0!important;opacity:.94}
+@media(max-width:1050px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))!important}.steps>div{min-height:235px}}
+@media(max-width:600px){.steps{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}.steps>div{min-height:0;padding:25px!important;gap:11px}.steps>div h3{font-size:25px!important}.steps>div p{font-size:14px!important}}
+
 </style>
 </head>
 <body>
