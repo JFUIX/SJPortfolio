@@ -1,4 +1,4 @@
-# Digital Marketing Portfolio
+# SJPortfolio
 
 A responsive, single-page digital marketing portfolio showcasing creative strategy, social media, paid advertising, search visibility, selected work, and a contact enquiry flow.
 
