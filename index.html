@@ -690,6 +690,16 @@ footer .logo b{color:#ed3c29!important}
 @media(max-width:1050px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))!important}.steps>div{min-height:235px}}
 @media(max-width:600px){.steps{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}.steps>div{min-height:0;padding:25px!important;gap:11px}.steps>div h3{font-size:25px!important}.steps>div p{font-size:14px!important}}
 
+
+/* Fixed, accessible project CTA */
+.floating-project-cta{position:fixed;right:clamp(16px,3vw,38px);bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:999;display:inline-flex;align-items:center;gap:12px;padding:9px 10px 9px 20px;min-height:58px;background:#111;color:#fff!important;border:1px solid rgba(255,255,255,.18);border-radius:100px;text-decoration:none!important;box-shadow:0 8px 30px rgba(0,0,0,.25);font:800 12px Archivo,Arial,sans-serif;letter-spacing:.025em;transition:transform .2s,background .2s,box-shadow .2s}
+.floating-project-cta span{color:#fff}
+.floating-project-cta i{display:grid;place-items:center;width:39px;height:39px;border-radius:50%;background:#ed3c29;color:#fff;font-style:normal;font-size:20px;line-height:1}
+.floating-project-cta:hover{transform:translateY(-4px);background:#174bc0;box-shadow:0 12px 34px rgba(0,0,0,.3)}
+.floating-project-cta:focus-visible{outline:3px solid #174bc0;outline-offset:4px}
+@media(max-width:640px){.floating-project-cta{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));min-height:52px;padding:7px 7px 7px 15px;font-size:11px;gap:9px}.floating-project-cta i{width:36px;height:36px}}
+@media(prefers-reduced-motion:reduce){.floating-project-cta{transition:none}}
+
 </style>
 </head>
 <body>
@@ -761,5 +771,6 @@ if(!v('n')||!v('e')||!v('m')){alert('Please add your name, email and goals.');re
 var body='Name: '+v('n')+'\nEmail: '+v('e')+'\nBusiness: '+v('b')+'\nService: '+v('s')+'\n\n'+v('m');
 location.href='mailto:serenj.business@gmail.com?subject='+encodeURIComponent('New enquiry from '+v('n'))+'&body='+encodeURIComponent(body)};
 </script>
+<a class="floating-project-cta" href="#contact" aria-label="Start a project — go to contact form"><span>START A PROJECT</span><i aria-hidden="true">↗</i></a>
 </body>
 </html>
