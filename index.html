@@ -1082,6 +1082,31 @@ footer .logo b{color:#ed3c29!important}
  }
 }
 
+
+/* Animated growth motif — layered BEHIND the original transparent portrait.
+   No hero copy, portrait source or other sections changed. */
+.sx-stage .sx-growth{position:absolute;z-index:1;pointer-events:none;right:-1.5%;top:15%;width:min(72%,950px);height:73%;opacity:.95;overflow:visible}
+.sx-stage .sx-growth-svg{width:100%;height:100%;overflow:visible;display:block}
+.sx-stage .sx-growth-line{stroke-dasharray:1100;stroke-dashoffset:1100;animation:sxGrowthDraw 3.3s cubic-bezier(.22,.65,.25,1) .25s both}
+.sx-stage .sx-growth-halo{stroke-dasharray:1100;stroke-dashoffset:1100;animation:sxGrowthDraw 3.3s cubic-bezier(.22,.65,.25,1) .25s both}
+.sx-stage .sx-growth-tip{transform-origin:737px 75px;animation:sxGrowthTip 3.3s ease-out .25s both}
+.sx-stage .sx-growth-node{animation:sxGrowthPulse 3s ease-in-out infinite}
+.sx-stage .sx-growth-node.node-2{animation-delay:.6s}
+.sx-stage .sx-growth-node.node-3{animation-delay:1.2s}
+@keyframes sxGrowthDraw{to{stroke-dashoffset:0}}
+@keyframes sxGrowthTip{0%,78%{opacity:0;transform:scale(.5)}100%{opacity:1;transform:scale(1)}}
+@keyframes sxGrowthPulse{0%,100%{opacity:.78}50%{opacity:1;filter:drop-shadow(0 0 7px #16e5c9)}}
+@media(min-width:761px) and (max-width:1100px){.sx-stage .sx-growth{right:-7%;top:20%;width:76%;height:67%}}
+@media(max-width:760px){
+ .sx-stage .sx-growth{top:31%!important;right:-29%!important;width:112%!important;height:52%!important;opacity:.82!important;z-index:1!important}
+ .sx-stage .sx-growth-svg{overflow:visible}
+}
+@media(max-width:380px){.sx-stage .sx-growth{top:33%!important;right:-36%!important;width:125%!important;height:48%!important}}
+@media(prefers-reduced-motion:reduce){
+ .sx-stage .sx-growth-line,.sx-stage .sx-growth-halo{animation:none!important;stroke-dashoffset:0!important}
+ .sx-stage .sx-growth-tip,.sx-stage .sx-growth-node{animation:none!important;opacity:1!important}
+}
+
 </style>
 </head>
 <body id="top">
@@ -1093,6 +1118,24 @@ footer .logo b{color:#ed3c29!important}
     <span class="sx-tag">Portfolio ✳ Seren</span>
     <p class="sx-title">Digital marketing.<br>Big brand energy.</p>
     <h1 class="sx-giant" id="hero-heading"><span>DIGITAL</span> <span>MARKETING</span></h1>
+    <div class="sx-growth" aria-hidden="true">
+      <svg class="sx-growth-svg" viewBox="0 0 780 540" preserveAspectRatio="xMidYMid meet" focusable="false">
+        <defs>
+          <linearGradient id="sx-growth-stroke" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#0a776f"/><stop offset="55%" stop-color="#14c5ad"/><stop offset="100%" stop-color="#36ffe0"/></linearGradient>
+          <filter id="sx-growth-glow" x="-45%" y="-60%" width="190%" height="220%"><feGaussianBlur stdDeviation="9"/></filter>
+          <pattern id="sx-growth-grid" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M72 0H0V72" fill="none" stroke="#098b83" stroke-opacity=".23" stroke-width="1"/></pattern>
+          <radialGradient id="sx-growth-haze"><stop offset="0%" stop-color="#0bc6b2" stop-opacity=".19"/><stop offset="100%" stop-color="#0bc6b2" stop-opacity="0"/></radialGradient>
+        </defs>
+        <ellipse cx="445" cy="325" rx="355" ry="245" fill="url(#sx-growth-haze)"/>
+        <rect x="65" y="130" width="675" height="365" fill="url(#sx-growth-grid)" opacity=".68"/>
+        <path class="sx-growth-halo" d="M24 465 C115 452 145 350 220 392 S315 432 388 325 S478 350 552 285 S642 315 737 75" fill="none" stroke="#22efd6" stroke-width="17" stroke-linecap="round" filter="url(#sx-growth-glow)" opacity=".75"/>
+        <path class="sx-growth-line" d="M24 465 C115 452 145 350 220 392 S315 432 388 325 S478 350 552 285 S642 315 737 75" fill="none" stroke="url(#sx-growth-stroke)" stroke-width="5" stroke-linecap="round"/>
+        <path class="sx-growth-tip" d="M692 91 L743 59 L748 118 L733 98 L713 121 Z" fill="#29f5d8" stroke="#e9fffa" stroke-width="2" stroke-linejoin="round"/>
+        <circle class="sx-growth-node node-1" cx="220" cy="392" r="9" fill="#cafff4" stroke="#22d9c1" stroke-width="4"/>
+        <circle class="sx-growth-node node-2" cx="388" cy="325" r="9" fill="#cafff4" stroke="#22d9c1" stroke-width="4"/>
+        <circle class="sx-growth-node node-3" cx="552" cy="285" r="9" fill="#cafff4" stroke="#22d9c1" stroke-width="4"/>
+      </svg>
+    </div>
     <div class="sx-ground" aria-hidden="true"></div>
     <img class="sx-person" src="assets/seren-cutout.png" alt="Seren standing with a laptop, transparent portrait" width="898" height="1122" fetchpriority="high" decoding="async">
     <div class="sx-giant sx-giant-front" aria-hidden="true"><span>DIGITAL</span> <span>MARKETING</span></div>
