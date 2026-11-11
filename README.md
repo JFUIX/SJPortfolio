@@ -17,8 +17,8 @@ Seren J’s responsive, single-page digital marketing portfolio showcasing creat
 ## Tech stack
 
 - HTML5
-- CSS3 (embedded in `index.html`)
-- Vanilla JavaScript
+- CSS3 (`styles.css`)
+- Vanilla JavaScript (`script.js`)
 - Google Fonts
 - GitHub Pages
 
@@ -26,7 +26,9 @@ Seren J’s responsive, single-page digital marketing portfolio showcasing creat
 
 ```text
 SJPortfolio/
-├── index.html   # Page markup, styles, and contact-form script
+├── index.html   # Semantic page markup
+├── styles.css   # Styling, themes and responsive layouts
+├── script.js    # Contact enquiry behavior
 ├── assets/      # Portfolio images and media
 └── README.md    # Project documentation
 ```
@@ -51,8 +53,9 @@ document.documentElement.removeAttribute('data-theme');
 
 ## Maintenance
 
-- Edit content, layout, and styling in `index.html`.
-- Responsive breakpoints and theme styles are in the embedded `<style>` block.
+- Edit content and markup in `index.html`.
+- Edit styling in `styles.css` and contact behavior in `script.js`.
+- Responsive breakpoints and theme styles are in `styles.css`.
 - The contact button uses `mailto:`; it does not submit to a server or store enquiries.
 - Changes pushed to the default branch are published through GitHub Pages, subject to deployment delay.
 
