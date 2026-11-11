@@ -1059,6 +1059,29 @@ footer .logo b{color:#ed3c29!important}
  .sx-stage .sx-person{top:280px!important;height:385px!important}
 }
 
+
+/* Mobile portrait: modest enlargement without intruding into the headline */
+@media(max-width:760px){
+ .sx-stage .sx-person{
+  top:286px!important;
+  width:112%!important;
+  max-width:590px!important;
+  height:462px!important;
+  left:50%!important;
+  right:auto!important;
+  transform:translateX(-50%)!important;
+  object-fit:contain!important;
+  object-position:center top!important;
+ }
+}
+@media(max-width:380px){
+ .sx-stage .sx-person{
+  top:276px!important;
+  width:114%!important;
+  height:425px!important;
+ }
+}
+
 </style>
 </head>
 <body id="top">
