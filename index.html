@@ -7,6 +7,7 @@
 <meta name="theme-color" content="#f6f0e7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preload" as="image" href="assets/seren-cutout.png" fetchpriority="high">
+<script>document.documentElement.classList.add('hero-await');</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <title>Seren | Digital marketing. Big brand energy.</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Allura&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -1221,6 +1222,12 @@ footer .logo b{color:#ed3c29!important}
  .sx-stage h1.sx-giant span.sx-signature{top:calc(100% - 7px)!important}
 }
 
+
+/* Keep the entire hero composition together until its critical portrait is ready.
+   This prevents the cutout from suddenly appearing over already-painted text. */
+.hero-await .sx-stage{visibility:hidden!important}
+.sx-stage{transition:none!important}
+
 </style>
 </head>
 <body id="top">
@@ -1253,7 +1260,7 @@ footer .logo b{color:#ed3c29!important}
       </svg>
     </div>
     <div class="sx-ground" aria-hidden="true"></div>
-    <img class="sx-person" src="assets/seren-cutout.png" alt="Seren standing with a laptop, transparent portrait" width="898" height="1122" fetchpriority="high" decoding="async">
+    <img class="sx-person" src="assets/seren-cutout.png" alt="Seren standing with a laptop, transparent portrait" width="898" height="1122" fetchpriority="high" loading="eager" decoding="sync">
     <div class="sx-giant sx-giant-front" aria-hidden="true"><span>DIGITAL</span> <span>MARKETING</span></div>
     <div class="sx-giant sx-giant-outline" aria-hidden="true"><span>DIGITAL</span> <span><em>MAR</em>KETING</span></div>
     <span class="sx-foot"><span>Fresh perspectives</span><span>Smart strategy</span><span>Real impact</span></span>
@@ -1314,5 +1321,23 @@ var body='Name: '+v('n')+'\nEmail: '+v('e')+'\nPhone / WhatsApp: '+(v('phone')||
 location.href='mailto:serenj.business@gmail.com?subject='+encodeURIComponent('New enquiry from '+v('n'))+'&body='+encodeURIComponent(body)};
 </script>
 <a class="floating-project-cta" href="#contact" aria-label="Let’s collaborate — go to contact form"><span>LET’S COLLABORATE</span><i aria-hidden="true">↗</i></a>
+<script>
+(function(){
+ var stage=document.querySelector('.sx-stage');
+ var portrait=stage&&stage.querySelector('.sx-person');
+ var released=false;
+ function show(){if(released)return;released=true;document.documentElement.classList.remove('hero-await')}
+ if(!portrait){show();return}
+ if(portrait.complete){
+  if(portrait.naturalWidth){if(portrait.decode){portrait.decode().then(show,show)}else show()}
+  else show();
+ }else{
+  portrait.addEventListener('load',function(){if(portrait.decode){portrait.decode().then(show,show)}else show()},{once:true});
+  portrait.addEventListener('error',show,{once:true});
+ }
+ // Never keep the hero hidden indefinitely on a failed or extremely slow connection.
+ setTimeout(show,4500);
+})();
+</script>
 </body>
 </html>
