@@ -771,6 +771,23 @@ footer .logo b{color:#ed3c29!important}
 /* Subtle depth for the oversized DIGITAL MARKETING hero typography */
 .sx-giant,.sx-giant span{ text-shadow:2px 4px 7px rgba(0,0,0,.15)!important; }
 @media(max-width:640px){.sx-giant,.sx-giant span{text-shadow:1px 3px 5px rgba(0,0,0,.13)!important}}
+
+/* Three principles: editorial typography, oversized index, and distinct accent treatment */
+.testimonial-card{position:relative!important;overflow:hidden!important;padding-top:clamp(24px,3vw,42px)!important}
+.testimonial-number{display:flex!important;align-items:flex-end!important;gap:12px!important;min-height:112px!important;margin-bottom:26px!important;border-bottom:1px solid rgba(17,17,17,.16)!important;padding-bottom:20px!important;color:#111!important;letter-spacing:normal!important}
+.principle-index{align-self:flex-start;font:800 12px/1 Archivo,Arial,sans-serif!important;letter-spacing:.09em!important;padding:7px 8px!important;background:#174bc0!important;color:#fff!important;transform:rotate(-5deg)}
+.principle-word{font:900 clamp(34px,3.7vw,64px)/.95 Archivo,Arial,sans-serif!important;letter-spacing:-.085em!important;text-transform:none!important;overflow-wrap:anywhere!important;color:#111!important}
+.principle-dot{color:#ed3c29!important}
+.testimonial-card:nth-child(2) .principle-index{background:#ed3c29!important;transform:rotate(5deg)}
+.testimonial-card:nth-child(2) .principle-dot{color:#174bc0!important}
+.testimonial-card:nth-child(3) .principle-index{background:#111!important;transform:rotate(-4deg)}
+.testimonial-card:nth-child(3) .principle-dot{color:#174bc0!important}
+.testimonial-card:nth-child(1) .principle-word{font-style:italic!important}
+.testimonial-card:nth-child(2) .principle-word{letter-spacing:-.09em!important}
+.testimonial-card:nth-child(3) .principle-word{font-stretch:condensed!important}
+@media(max-width:900px){.testimonial-number{min-height:85px!important}.principle-word{font-size:clamp(33px,5.2vw,55px)!important}}
+@media(max-width:640px){.testimonial-number{min-height:75px!important;gap:12px!important;margin-bottom:18px!important}.principle-word{font-size:clamp(39px,10vw,58px)!important}}
+
 </style>
 </head>
 <body>
@@ -817,9 +834,9 @@ footer .logo b{color:#ed3c29!important}
 <div class="steps"><div><small>01 / Listen</small><h3>Start with your story.</h3><p>Your audience, your goals and what’s getting in the way. We get the context before creating the plan.</p></div><div><small>02 / Map it out</small><h3>Give it direction.</h3><p>Define the offer, channels and measures of success. Everything gets a purpose.</p></div><div><small>03 / Make it happen</small><h3>Create. Launch. Learn.</h3><p>Bring the strategy to life with content, campaigns and a connected customer journey.</p></div><div><small>04 / Keep refining</small><h3>Follow what works.</h3><p>Review the numbers, test the next idea and put more energy into what moves the needle.</p></div></div></div></section>
 
 <section class="testimonial-section" aria-labelledby="testimonial-title"><div class="w"><div class="testimonial-heading"><div><p class="tag">Our approach</p><h2 id="testimonial-title">Good marketing.<br><em>Built with purpose.</em></h2></div><p>Three principles behind every project.</p></div><div class="testimonial-deck">
-<article class="testimonial-card"><span class="testimonial-number">01 / CLARITY</span><p>Make it easy for the right people to understand your offer, connect with your brand, and take the next step.</p><div class="testimonial-person"><span class="testimonial-avatar">01</span><div><strong>Clear messaging</strong><small>Strategy that speaks to your audience</small></div></div></article>
-<article class="testimonial-card"><span class="testimonial-number">02 / CREATIVITY</span><p>Build a recognizable brand presence with thoughtful content and creative direction that has a reason behind every decision.</p><div class="testimonial-person"><span class="testimonial-avatar">02</span><div><strong>Distinctive creative</strong><small>Content with intention</small></div></div></article>
-<article class="testimonial-card"><span class="testimonial-number">03 / MOMENTUM</span><p>Turn attention into meaningful action with connected campaigns, stronger journeys, and a focus on continuous improvement.</p><div class="testimonial-person"><span class="testimonial-avatar">03</span><div><strong>Growth-minded execution</strong><small>Measure, learn, improve</small></div></div></article>
+<article class="testimonial-card"><span class="testimonial-number"><span class="principle-index">01</span><span class="principle-word">Clarity<span class="principle-dot">.</span></span></span><p>Make it easy for the right people to understand your offer, connect with your brand, and take the next step.</p><div class="testimonial-person"><span class="testimonial-avatar">01</span><div><strong>Clear messaging</strong><small>Strategy that speaks to your audience</small></div></div></article>
+<article class="testimonial-card"><span class="testimonial-number"><span class="principle-index">02</span><span class="principle-word">Creativity<span class="principle-dot">.</span></span></span><p>Build a recognizable brand presence with thoughtful content and creative direction that has a reason behind every decision.</p><div class="testimonial-person"><span class="testimonial-avatar">02</span><div><strong>Distinctive creative</strong><small>Content with intention</small></div></div></article>
+<article class="testimonial-card"><span class="testimonial-number"><span class="principle-index">03</span><span class="principle-word">Momentum<span class="principle-dot">.</span></span></span><p>Turn attention into meaningful action with connected campaigns, stronger journeys, and a focus on continuous improvement.</p><div class="testimonial-person"><span class="testimonial-avatar">03</span><div><strong>Growth-minded execution</strong><small>Measure, learn, improve</small></div></div></article>
 </div></div></section>
 
 <section style="padding-top:0"><div class="w"><div class="faq"><p class="tag">A few things you might be wondering</p><h2 style="margin-bottom:32px">Good <em>questions.</em></h2>
