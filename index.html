@@ -914,6 +914,7 @@ footer .logo b{color:#ed3c29!important}
 
 <section id="contact" class="cta"><div class="w g"><div><p class="tag" style="color:#f2b8a2">Your next chapter starts here</p><h2>Ready for your next big thing?</h2><p style="max-width:300px;margin-top:24px">Tell us what you do and what you want to grow. Let’s build a plan that fits your business.</p><details class="contact-reveal"><summary>CONTACT NOW <span aria-hidden="true">+</span></summary><div class="contact-reveal-links"><a href="mailto:serenj.business@gmail.com">serenj.business@gmail.com ↗</a><a href="https://wa.me/18202008747" target="_blank" rel="noopener noreferrer">Chat on WhatsApp · +1 820 200 8747 ↗</a></div></details></div>
 <div class="fm"><label>Your name *<input id="n" placeholder="Let’s get acquainted"></label><label>Your email *<input id="e" type="email" placeholder="you@yourbrand.com"></label>
+<label class="f">Phone / WhatsApp (optional)<input id="phone" type="tel" autocomplete="tel" placeholder="+1 234 567 8900"></label>
 <label class="f">Business / website<input id="b" placeholder="Tell us who you are"></label>
 <label class="f">What can we help with?<select id="s"><option>Let’s figure it out together</option><option>Social &amp; content</option><option>Paid advertising</option><option>SEO &amp; websites</option><option>Strategy &amp; automation</option></select></label>
 <label class="f">What do you want to achieve? *<textarea id="m" rows="3" placeholder="Your goals, your challenge, your dream project…"></textarea></label>
@@ -923,7 +924,7 @@ footer .logo b{color:#ed3c29!important}
 <script>
 document.getElementById('go').onclick=function(){var v=function(i){return document.getElementById(i).value.trim()};
 if(!v('n')||!v('e')||!v('m')){alert('Please add your name, email and goals.');return}
-var body='Name: '+v('n')+'\nEmail: '+v('e')+'\nBusiness: '+v('b')+'\nService: '+v('s')+'\n\n'+v('m');
+var body='Name: '+v('n')+'\nEmail: '+v('e')+'\nPhone / WhatsApp: '+(v('phone')||'Not provided')+'\nBusiness: '+v('b')+'\nService: '+v('s')+'\n\n'+v('m');
 location.href='mailto:serenj.business@gmail.com?subject='+encodeURIComponent('New enquiry from '+v('n'))+'&body='+encodeURIComponent(body)};
 </script>
 <a class="floating-project-cta" href="#contact" aria-label="Let’s collaborate — go to contact form"><span>LET’S COLLABORATE</span><i aria-hidden="true">↗</i></a>
