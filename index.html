@@ -1241,15 +1241,24 @@ footer .logo b{color:#ed3c29!important}
 }
 @media(prefers-reduced-motion:reduce){.floating-project-cta{animation:none!important}}
 
+[data-refresh-page]{color:inherit;text-decoration:none;cursor:pointer}
 </style>
 </head>
 <body id="top">
-<header class="w"><nav><a class="logo" href="#top" aria-label="Seren — back to top">seren<b>✳︎</b></a><div class="nl"><a href="#work">Selected work</a><a href="#what">What we do</a><a href="#approach">The approach</a></div><a class="btn" href="#contact">Let’s talk growth ↗</a></nav></header>
+<script>
+document.addEventListener('click',function(event){
+ var link=event.target.closest('a[data-refresh-page]');
+ if(!link||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+ event.preventDefault();
+ window.location.reload();
+});
+</script>
+<header class="w"><nav><a class="logo" href="" data-refresh-page aria-label="Seren — refresh page">seren<b>✳︎</b></a><div class="nl"><a href="#work">Selected work</a><a href="#what">What we do</a><a href="#approach">The approach</a></div><a class="btn" href="#contact">Let’s talk growth ↗</a></nav></header>
 
 <main>
 <section class="sx" aria-labelledby="hero-heading">
   <div class="sx-stage">
-    <span class="sx-tag">Portfolio ✳ Seren</span>
+    <span class="sx-tag">Portfolio ✳ <a href="" data-refresh-page>Seren</a></span>
     <p class="sx-title">Bold ideas.<br>Big brand energy.</p>
     <h1 class="sx-giant" id="hero-heading"><span>DIGITAL</span> <span>MARKETING</span><span class="sx-signature" aria-label="Portfolio">Portfolio</span></h1>
     <div class="sx-growth" aria-hidden="true">
@@ -1301,7 +1310,7 @@ footer .logo b{color:#ed3c29!important}
 <div class="svc"><i>04</i><h3>Strategy &amp; automation</h3><p>Brand positioning, marketing audits, WhatsApp funnels and workflows that keep enquiries moving.</p><i>↗</i></div></div></section>
 
 <section id="approach"><div class="w"><div class="app"><div class="mk mk-roi" aria-label="Do it for the ROI"><h3><span>Do it</span><span>for the</span><span class="roi-last">ROI<span class="roi-dot">.</span><svg class="roi-shades" viewBox="0 0 220 70" aria-hidden="true" focusable="false"><path fill="#111" d="M0 5h220v15h-15v20h-15v10h-15v10h-60V50h-10V35H95v15H85v10H25V50H10V40H0z"/><path fill="#fff" d="M25 25h12v12H25zm12 12h12v12H37zm12-12h12v12H49zm80 0h12v12h-12zm12 12h12v12h-12zm12-12h12v12h-12z"/></svg></span></h3></div>
-<div><p class="tag">03 / The Seren approach</p><h2>Look good.<br><em>Work harder.</em></h2><p style="margin-top:24px">Seren helps brands stand out and win customers. We connect strong design, clear messaging and the right channels so your marketing works together.</p><p>The portfolio spans social media, performance marketing, SEO and creative support for brands across Pakistan, India, the US and Australia. From skincare launches to local service campaigns, the approach starts with understanding the business behind the brief.</p><p>You get a clear plan, content with a purpose and campaigns measured against your goals.</p><strong>Big ideas. Clear direction.</strong></div></div></div></section>
+<div><p class="tag">03 / The <a href="" data-refresh-page>Seren</a> approach</p><h2>Look good.<br><em>Work harder.</em></h2><p style="margin-top:24px"><a href="" data-refresh-page>Seren</a> helps brands stand out and win customers. We connect strong design, clear messaging and the right channels so your marketing works together.</p><p>The portfolio spans social media, performance marketing, SEO and creative support for brands across Pakistan, India, the US and Australia. From skincare launches to local service campaigns, the approach starts with understanding the business behind the brief.</p><p>You get a clear plan, content with a purpose and campaigns measured against your goals.</p><strong>Big ideas. Clear direction.</strong></div></div></div></section>
 
 <section style="padding-top:0"><div class="w"><div class="top"><div><p class="tag">From first hello to what’s next</p><h2>No confusion.<br><em>Here’s the plan.</em></h2></div></div>
 <div class="steps"><div><small>01 / Listen</small><h3>Start with your story.</h3><p>Your audience, your goals and what’s getting in the way. We get the context before creating the plan.</p></div><div><small>02 / Map it out</small><h3>Give it direction.</h3><p>Define the offer, channels and measures of success. Everything gets a purpose.</p></div><div><small>03 / Make it happen</small><h3>Create. Launch. Learn.</h3><p>Bring the strategy to life with content, campaigns and a connected customer journey.</p></div><div><small>04 / Keep refining</small><h3>Follow what works.</h3><p>Review the numbers, test the next idea and put more energy into what moves the needle.</p></div></div></div></section>
@@ -1326,7 +1335,7 @@ footer .logo b{color:#ed3c29!important}
 <label class="f">What do you want to achieve? *<textarea id="m" required rows="3" placeholder="Your goals, your challenge, your dream project…"></textarea></label>
 <button class="btn" id="go" type="button">Let’s get started <span>↗</span></button><small class="f" style="grid-column:1/-1;font-size:11px;color:#555">Opens a ready to send enquiry in your email app.</small></div></div></section>
 </main>
-<footer><div class="w"><span class="logo">seren<b style="color:var(--hot)">✳︎</b></span><span>© 2026 Seren. Thoughtful marketing. Meaningful growth.</span><a href="#work">Selected work ↗</a><a href="mailto:serenj.business@gmail.com">Say hello ↗</a><a href="#top">Back to top ↑</a></div></footer>
+<footer><div class="w"><a class="logo" href="" data-refresh-page aria-label="Seren — refresh page">seren<b style="color:var(--hot)">✳︎</b></a><span>© 2026 <a href="" data-refresh-page>Seren</a>. Thoughtful marketing. Meaningful growth.</span><a href="#work">Selected work ↗</a><a href="mailto:serenj.business@gmail.com">Say hello ↗</a><a href="#top">Back to top ↑</a></div></footer>
 <script>
 document.getElementById('go').onclick=function(){var v=function(i){return document.getElementById(i).value.trim()};
 if(!v('n')||!v('e')||!v('m')){alert('Please add your name, email and goals.');return}\nvar email=document.getElementById('e');if(!email.checkValidity()){email.reportValidity();email.focus();return}
