@@ -666,6 +666,16 @@ footer .logo b{color:#ed3c29!important}
 @media(max-width:900px){.sx-person{left:50%!important;right:auto!important;transform:translateX(-50%)!important}}
 @media(max-width:640px){.sx-person{left:50%!important;right:auto!important;transform:translateX(-50%)!important}}
 
+
+/* Make-your-mark panel: remove shapes behind lettering and maintain strong contrast */
+.mk{background:#174bc0!important;color:#fff!important;isolation:isolate}
+.mk::before,.mk::after{content:none!important;display:none!important}
+.mk h3{position:relative!important;z-index:2!important;color:#fff!important;text-shadow:none!important}
+.mk small{position:absolute!important;z-index:2!important;color:#fff!important;letter-spacing:.1em}
+@media(prefers-color-scheme:dark){.mk{background:#174bc0!important;color:#fff!important}.mk h3,.mk small{color:#fff!important}}
+:root[data-theme="dark"] .mk,:root[data-theme="light"] .mk{background:#174bc0!important}
+:root[data-theme="dark"] .mk h3,:root[data-theme="light"] .mk h3,:root[data-theme="dark"] .mk small,:root[data-theme="light"] .mk small{color:#fff!important}
+
 </style>
 </head>
 <body>
