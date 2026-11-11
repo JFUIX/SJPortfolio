@@ -9,7 +9,7 @@
 <link rel="preload" as="image" href="assets/seren-cutout.png" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <title>Seren | Digital marketing. Big brand energy.</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Allura&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f6f0e7;--ink:#3e0b10;--mut:#7a5a52;--line:#d8cbb8;--card:#ebe1d2;--lime:#9c2d17;--hot:#e8643e;--lav:#e0d1bb;--pur:#a3341b;--peach:#b5401f;--sky:#4a0e13;--dk:#170f0e;--dkt:#f6f0e7;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -1160,6 +1160,31 @@ footer .logo b{color:#ed3c29!important}
  .sx-stage .sx-growth-flow{animation:none!important;opacity:0!important}
 }
 
+
+/* Editorial signature beneath the original DIGITAL MARKETING headline. */
+.sx-stage .sx-signature{
+ position:absolute;z-index:6;pointer-events:none;
+ left:var(--hero-text-inset,clamp(24px,5.2vw,88px));
+ top:clamp(565px,47vw,630px);
+ display:block;width:max-content;max-width:36%;
+ color:#161616;
+ font:400 clamp(48px,6.3vw,94px)/.9 'Allura','Brush Script MT',cursive;
+ letter-spacing:0;text-transform:none;white-space:nowrap;
+ transform:rotate(-6deg);
+}
+@media(min-width:761px) and (max-width:1100px){
+ .sx-stage .sx-signature{top:clamp(520px,55vw,605px);font-size:clamp(49px,6vw,72px);max-width:33%}
+}
+@media(max-width:760px){
+ .sx-stage .sx-signature{
+  left:var(--hero-text-inset,20px);top:clamp(248px,32vw,275px);
+  font-size:clamp(43px,10vw,65px);max-width:45%;z-index:7;
+ }
+}
+@media(max-width:380px){
+ .sx-stage .sx-signature{top:244px;font-size:43px}
+}
+
 </style>
 </head>
 <body id="top">
@@ -1169,8 +1194,9 @@ footer .logo b{color:#ed3c29!important}
 <section class="sx" aria-labelledby="hero-heading">
   <div class="sx-stage">
     <span class="sx-tag">Portfolio ✳ Seren</span>
-    <p class="sx-title">Digital marketing.<br>Big brand energy.</p>
+    <p class="sx-title">Bold ideas.<br>Big brand energy.</p>
     <h1 class="sx-giant" id="hero-heading"><span>DIGITAL</span> <span>MARKETING</span></h1>
+    <span class="sx-signature" aria-label="Portfolio">Portfolio</span>
     <div class="sx-growth" aria-hidden="true">
       <svg class="sx-growth-svg" viewBox="0 0 780 540" preserveAspectRatio="xMidYMid meet" focusable="false">
         <defs>
