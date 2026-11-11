@@ -1107,6 +1107,20 @@ footer .logo b{color:#ed3c29!important}
  .sx-stage .sx-growth-tip,.sx-stage .sx-growth-node{animation:none!important;opacity:1!important}
 }
 
+
+/* Growth path refinement: begins hidden behind her waist and emerges only to her right. */
+.sx-stage .sx-growth{right:3.5%!important;top:11%!important;width:min(75%,970px)!important;height:72%!important;overflow:hidden!important;opacity:1!important}
+.sx-stage .sx-growth-svg{overflow:hidden!important}
+.sx-stage .sx-growth-tip{transform-origin:708px 112px!important}
+.sx-stage .sx-growth-flow{stroke-dasharray:38 1200;stroke-dashoffset:0;filter:drop-shadow(0 0 7px #24ffe0) drop-shadow(0 0 13px #14c5ad);animation:sxGrowthTravel 4.5s linear 3.4s infinite}
+.sx-stage .sx-growth-end{transform-origin:708px 112px;filter:drop-shadow(0 0 10px #2dffe2) drop-shadow(0 0 18px #10d7c3);animation:sxGrowthBlink 1.8s ease-in-out 3.4s infinite}
+@keyframes sxGrowthTravel{from{stroke-dashoffset:0}to{stroke-dashoffset:-1238}}
+@keyframes sxGrowthBlink{0%,100%{opacity:.55;transform:scale(.7)}45%{opacity:1;transform:scale(1.35)}65%{opacity:.8;transform:scale(.95)}}
+@media(min-width:761px) and (max-width:1100px){.sx-stage .sx-growth{right:2%!important;top:15%!important;width:82%!important;height:68%!important}}
+@media(max-width:760px){.sx-stage .sx-growth{top:29%!important;right:2%!important;width:90%!important;height:49%!important;opacity:.95!important}}
+@media(max-width:380px){.sx-stage .sx-growth{top:31%!important;right:2%!important;width:94%!important;height:46%!important}}
+@media(prefers-reduced-motion:reduce){.sx-stage .sx-growth-flow{animation:none!important;opacity:0!important}.sx-stage .sx-growth-end{animation:none!important;opacity:1!important;transform:none!important}}
+
 </style>
 </head>
 <body id="top">
@@ -1128,12 +1142,14 @@ footer .logo b{color:#ed3c29!important}
         </defs>
         <ellipse cx="445" cy="325" rx="355" ry="245" fill="url(#sx-growth-haze)"/>
         <rect x="65" y="130" width="675" height="365" fill="url(#sx-growth-grid)" opacity=".68"/>
-        <path class="sx-growth-halo" d="M24 465 C115 452 145 350 220 392 S315 432 388 325 S478 350 552 285 S642 315 737 75" fill="none" stroke="#22efd6" stroke-width="17" stroke-linecap="round" filter="url(#sx-growth-glow)" opacity=".75"/>
-        <path class="sx-growth-line" d="M24 465 C115 452 145 350 220 392 S315 432 388 325 S478 350 552 285 S642 315 737 75" fill="none" stroke="url(#sx-growth-stroke)" stroke-width="5" stroke-linecap="round"/>
-        <path class="sx-growth-tip" d="M692 91 L743 59 L748 118 L733 98 L713 121 Z" fill="#29f5d8" stroke="#e9fffa" stroke-width="2" stroke-linejoin="round"/>
-        <circle class="sx-growth-node node-1" cx="220" cy="392" r="9" fill="#cafff4" stroke="#22d9c1" stroke-width="4"/>
-        <circle class="sx-growth-node node-2" cx="388" cy="325" r="9" fill="#cafff4" stroke="#22d9c1" stroke-width="4"/>
-        <circle class="sx-growth-node node-3" cx="552" cy="285" r="9" fill="#cafff4" stroke="#22d9c1" stroke-width="4"/>
+        <path class="sx-growth-halo" d="M265 370 C325 385 337 315 395 325 S465 350 522 255 S604 285 640 225 S688 170 708 112" fill="none" stroke="#22efd6" stroke-width="17" stroke-linecap="round" filter="url(#sx-growth-glow)" opacity=".75"/>
+        <path class="sx-growth-line" d="M265 370 C325 385 337 315 395 325 S465 350 522 255 S604 285 640 225 S688 170 708 112" fill="none" stroke="url(#sx-growth-stroke)" stroke-width="5" stroke-linecap="round"/>
+        <path class="sx-growth-tip" d="M674 119 L713 95 L718 142 L706 128 L690 149 Z" fill="#29f5d8" stroke="#e9fffa" stroke-width="2" stroke-linejoin="round"/>
+        <circle class="sx-growth-node node-1" cx="395" cy="325" r="9" fill="#cafff4" stroke="#22d9c1" stroke-width="4"/>
+        <circle class="sx-growth-node node-2" cx="522" cy="255" r="9" fill="#cafff4" stroke="#22d9c1" stroke-width="4"/>
+        <circle class="sx-growth-node node-3" cx="640" cy="225" r="9" fill="#cafff4" stroke="#22d9c1" stroke-width="4"/>
+        <path class="sx-growth-flow" d="M265 370 C325 385 337 315 395 325 S465 350 522 255 S604 285 640 225 S688 170 708 112" fill="none" stroke="#e9fffb" stroke-width="7" stroke-linecap="round" />
+        <circle class="sx-growth-end" cx="708" cy="112" r="12" fill="#bafff4" />
       </svg>
     </div>
     <div class="sx-ground" aria-hidden="true"></div>
