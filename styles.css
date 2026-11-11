@@ -1149,3 +1149,15 @@ footer .logo b{color:#ed3c29!important}
 img,svg{max-width:100%}
 .fm input:focus-visible,.fm select:focus-visible,.fm textarea:focus-visible{outline:2px solid #174bc0;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Lightweight continuous streaks: four separated highlights on the existing graph path.
+   Pure SVG/CSS, no JavaScript or extra assets. */
+.sx-stage .sx-growth-streaks{pointer-events:none}
+.sx-stage .sx-growth-streaks .sx-growth-flow{stroke-dasharray:26 974;stroke-dashoffset:0;animation:sxStreakFlow 6s linear infinite!important;filter:none!important;opacity:.95}
+.sx-stage .sx-growth-streaks .streak-1{animation-delay:0s!important;stroke-dasharray:32 968}
+.sx-stage .sx-growth-streaks .streak-2{animation-delay:-1.5s!important;stroke-dasharray:21 979;opacity:.85}
+.sx-stage .sx-growth-streaks .streak-3{animation-delay:-3s!important;stroke-dasharray:16 984;opacity:.9}
+.sx-stage .sx-growth-streaks .streak-4{animation-delay:-4.5s!important;stroke-dasharray:25 975;opacity:.78}
+@keyframes sxStreakFlow{to{stroke-dashoffset:-1000}}
+@media(max-width:760px){.sx-stage .sx-growth-streaks .sx-growth-flow{stroke-width:4!important}}
+@media(prefers-reduced-motion:reduce){.sx-stage .sx-growth-streaks .sx-growth-flow{animation:none!important;opacity:0!important}}
