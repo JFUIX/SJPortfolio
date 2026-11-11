@@ -7,10 +7,14 @@
 <meta name="theme-color" content="#f6f0e7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preload" as="image" href="assets/seren-cutout.png" fetchpriority="high">
-<script>document.documentElement.classList.add('hero-await');</script>
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<title>SJPortfolio | Digital Marketing & Creative Strategy</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Allura&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Seren Portfolio | Digital Marketing & Creative Strategy</title>
+<meta property="og:title" content="Seren Portfolio | Digital Marketing & Creative Strategy">
+<meta property="og:description" content="Creative strategy, social media, paid advertising, SEO, and measurable growth.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jfuix.github.io/SJPortfolio/">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Allura&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f6f0e7;--ink:#3e0b10;--mut:#7a5a52;--line:#d8cbb8;--card:#ebe1d2;--lime:#9c2d17;--hot:#e8643e;--lav:#e0d1bb;--pur:#a3341b;--peach:#b5401f;--sky:#4a0e13;--dk:#170f0e;--dkt:#f6f0e7;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -480,7 +484,7 @@ h2{line-height:1.08}
 
 
 /* GAZU-inspired monochrome fashion editorial layout, retaining Seren's palette/content */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 :root,:root[data-theme="dark"]{--bg:#f2efe9;--ink:#111;--mut:#4b4844;--line:#c8c4be;--card:#f2efe9;--lime:#174bc0;--hot:#ed3c29;--lav:#f2efe9;--pur:#174bc0;--peach:#ed3c29;--sky:#174bc0;--dk:#101010;--dkt:#fff;color-scheme:light}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#f2efe9;--ink:#111;--mut:#4b4844;--line:#c8c4be;--card:#f2efe9;--pur:#174bc0}}
 html,body{background:#f2efe9;color:#111}
@@ -1225,7 +1229,7 @@ footer .logo b{color:#ed3c29!important}
 
 /* Keep the entire hero composition together until its critical portrait is ready.
    This prevents the cutout from suddenly appearing over already-painted text. */
-.hero-await .sx-stage{visibility:hidden!important}
+/* Hero visible while image loads. */
 .sx-stage{transition:none!important}
 
 
@@ -1242,23 +1246,27 @@ footer .logo b{color:#ed3c29!important}
 @media(prefers-reduced-motion:reduce){.floating-project-cta{animation:none!important}}
 
 [data-refresh-page]{color:inherit;text-decoration:none;cursor:pointer}
+
+/* Theme and accessibility stabilization. */
+:root[data-theme="dark"]{--bg:#171717;--ink:#f5f1e9;--mut:#c5bfb8;--line:#5b5753;--card:#242424;--pur:#8fb0ff;--dk:#101010;--dkt:#fff;color-scheme:dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171717;--ink:#f5f1e9;--mut:#c5bfb8;--line:#5b5753;--card:#242424;--pur:#8fb0ff;--dk:#101010;--dkt:#fff;color-scheme:dark}}
+:root[data-theme="dark"],:root[data-theme="dark"] body,:root[data-theme="dark"] header,:root[data-theme="dark"] .service-strip{background:var(--bg);color:var(--ink)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]),:root:not([data-theme="light"]) body,:root:not([data-theme="light"]) header,:root:not([data-theme="light"]) .service-strip{background:var(--bg);color:var(--ink)}}
+img,svg{max-width:100%}
+.fm input:focus-visible,.fm select:focus-visible,.fm textarea:focus-visible{outline:2px solid #174bc0;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body id="top">
 <script>
-document.addEventListener('click',function(event){
- var link=event.target.closest('a[data-refresh-page]');
- if(!link||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
- event.preventDefault();
- window.location.reload();
-});
+/* Native anchors for keyboard and browser navigation. */
 </script>
-<header class="w"><nav><a class="logo" href="" data-refresh-page aria-label="Seren — refresh page">seren<b>✳︎</b></a><div class="nl"><a href="#work">Selected work</a><a href="#what">What we do</a><a href="#approach">The approach</a></div><a class="btn" href="#contact">Let’s talk growth ↗</a></nav></header>
+<header class="w"><nav><a class="logo" href="#top" aria-label="Seren — refresh page">seren<b>✳︎</b></a><div class="nl"><a href="#work">Selected work</a><a href="#what">What we do</a><a href="#approach">The approach</a></div><a class="btn" href="#contact">Let’s talk growth ↗</a></nav></header>
 
 <main>
 <section class="sx" aria-labelledby="hero-heading">
   <div class="sx-stage">
-    <span class="sx-tag">Portfolio ✳ <a href="" data-refresh-page>Seren</a></span>
+    <span class="sx-tag">Portfolio ✳ <a href="#top">Seren</a></span>
     <p class="sx-title">Bold ideas.<br>Big brand energy.</p>
     <h1 class="sx-giant" id="hero-heading"><span>DIGITAL</span> <span>MARKETING</span><span class="sx-signature" aria-label="Portfolio">Portfolio</span></h1>
     <div class="sx-growth" aria-hidden="true">
@@ -1282,7 +1290,7 @@ document.addEventListener('click',function(event){
       </svg>
     </div>
     <div class="sx-ground" aria-hidden="true"></div>
-    <img class="sx-person" src="assets/seren-cutout.png" alt="Seren standing with a laptop, transparent portrait" width="898" height="1122" fetchpriority="high" loading="eager" decoding="sync">
+    <img class="sx-person" src="assets/seren-cutout.png" alt="Seren standing with a laptop, transparent portrait" width="898" height="1122" fetchpriority="high" loading="eager" decoding="async">
     <div class="sx-giant sx-giant-front" aria-hidden="true"><span>DIGITAL</span> <span>MARKETING</span></div>
     <div class="sx-giant sx-giant-outline" aria-hidden="true"><span>DIGITAL</span> <span><em>MAR</em>KETING</span></div>
     <span class="sx-foot"><span>Fresh perspectives</span><span>Smart strategy</span><span>Real impact</span></span>
@@ -1310,7 +1318,7 @@ document.addEventListener('click',function(event){
 <div class="svc"><i>04</i><h3>Strategy &amp; automation</h3><p>Brand positioning, marketing audits, WhatsApp funnels and workflows that keep enquiries moving.</p><i>↗</i></div></div></section>
 
 <section id="approach"><div class="w"><div class="app"><div class="mk mk-roi" aria-label="Do it for the ROI"><h3><span>Do it</span><span>for the</span><span class="roi-last">ROI<span class="roi-dot">.</span><svg class="roi-shades" viewBox="0 0 220 70" aria-hidden="true" focusable="false"><path fill="#111" d="M0 5h220v15h-15v20h-15v10h-15v10h-60V50h-10V35H95v15H85v10H25V50H10V40H0z"/><path fill="#fff" d="M25 25h12v12H25zm12 12h12v12H37zm12-12h12v12H49zm80 0h12v12h-12zm12 12h12v12h-12zm12-12h12v12h-12z"/></svg></span></h3></div>
-<div><p class="tag">03 / The <a href="" data-refresh-page>Seren</a> approach</p><h2>Look good.<br><em>Work harder.</em></h2><p style="margin-top:24px"><a href="" data-refresh-page>Seren</a> helps brands stand out and win customers. We connect strong design, clear messaging and the right channels so your marketing works together.</p><p>The portfolio spans social media, performance marketing, SEO and creative support for brands across Pakistan, India, the US and Australia. From skincare launches to local service campaigns, the approach starts with understanding the business behind the brief.</p><p>You get a clear plan, content with a purpose and campaigns measured against your goals.</p><strong>Big ideas. Clear direction.</strong></div></div></div></section>
+<div><p class="tag">03 / The <a href="#top">Seren</a> approach</p><h2>Look good.<br><em>Work harder.</em></h2><p style="margin-top:24px"><a href="#top">Seren</a> helps brands stand out and win customers. We connect strong design, clear messaging and the right channels so your marketing works together.</p><p>The portfolio spans social media, performance marketing, SEO and creative support for brands across Pakistan, India, the US and Australia. From skincare launches to local service campaigns, the approach starts with understanding the business behind the brief.</p><p>You get a clear plan, content with a purpose and campaigns measured against your goals.</p><strong>Big ideas. Clear direction.</strong></div></div></div></section>
 
 <section style="padding-top:0"><div class="w"><div class="top"><div><p class="tag">From first hello to what’s next</p><h2>No confusion.<br><em>Here’s the plan.</em></h2></div></div>
 <div class="steps"><div><small>01 / Listen</small><h3>Start with your story.</h3><p>Your audience, your goals and what’s getting in the way. We get the context before creating the plan.</p></div><div><small>02 / Map it out</small><h3>Give it direction.</h3><p>Define the offer, channels and measures of success. Everything gets a purpose.</p></div><div><small>03 / Make it happen</small><h3>Create. Launch. Learn.</h3><p>Bring the strategy to life with content, campaigns and a connected customer journey.</p></div><div><small>04 / Keep refining</small><h3>Follow what works.</h3><p>Review the numbers, test the next idea and put more energy into what moves the needle.</p></div></div></div></section>
@@ -1328,38 +1336,21 @@ document.addEventListener('click',function(event){
 <details><summary>Can you guarantee the same results for my brand?</summary><p>No one can promise identical results. We can promise a clear plan, honest reporting and steady testing.</p></details></div></div></section>
 
 <section id="contact" class="cta"><div class="w g"><div><p class="tag" style="color:#f2b8a2">Your next chapter starts here</p><h2>Ready for your next big thing?</h2><p style="max-width:300px;margin-top:24px">Tell us what you do and what you want to grow. Let’s build a plan that fits your business.</p><details class="contact-reveal"><summary>CONTACT NOW <span aria-hidden="true">+</span></summary><div class="contact-reveal-links"><a href="mailto:serenj.business@gmail.com">serenj.business@gmail.com ↗</a><a href="https://wa.me/18202008747" target="_blank" rel="noopener noreferrer">Chat on WhatsApp · +1 820 200 8747 ↗</a></div></details></div>
-<div class="fm"><label>Your name *<input id="n" autocomplete="name" required placeholder="Let’s get acquainted"></label><label>Your email *<input id="e" type="email" autocomplete="email" required placeholder="you@yourbrand.com"></label>
+<form class="fm" id="enquiry-form"><label>Your name *<input id="n" autocomplete="name" required placeholder="Let’s get acquainted"></label><label>Your email *<input id="e" type="email" autocomplete="email" required placeholder="you@yourbrand.com"></label>
 <label class="f">Phone / WhatsApp (optional)<input id="phone" type="tel" autocomplete="tel" placeholder="+1 234 567 8900"></label>
 <label class="f">Business / website<input id="b" placeholder="Tell us who you are"></label>
 <label class="f">What can we help with?<select id="s"><option>Let’s figure it out together</option><option>Social &amp; content</option><option>Paid advertising</option><option>SEO &amp; websites</option><option>Strategy &amp; automation</option></select></label>
 <label class="f">What do you want to achieve? *<textarea id="m" required rows="3" placeholder="Your goals, your challenge, your dream project…"></textarea></label>
-<button class="btn" id="go" type="button">Let’s get started <span>↗</span></button><small class="f" style="grid-column:1/-1;font-size:11px;color:#555">Opens a ready to send enquiry in your email app.</small></div></div></section>
+<button class="btn" id="go" type="submit">Let’s get started <span>↗</span></button><small class="f" style="grid-column:1/-1;font-size:11px;color:#555">Opens a ready to send enquiry in your email app.</small></form></div></section>
 </main>
-<footer><div class="w"><a class="logo" href="" data-refresh-page aria-label="Seren — refresh page">seren<b style="color:var(--hot)">✳︎</b></a><span>© 2026 <a href="" data-refresh-page>Seren</a>. Thoughtful marketing. Meaningful growth.</span><a href="#work">Selected work ↗</a><a href="mailto:serenj.business@gmail.com">Say hello ↗</a><a href="#top">Back to top ↑</a></div></footer>
+<footer><div class="w"><a class="logo" href="#top" aria-label="Seren — refresh page">seren<b style="color:var(--hot)">✳︎</b></a><span>© 2026 <a href="#top">Seren</a>. Thoughtful marketing. Meaningful growth.</span><a href="#work">Selected work ↗</a><a href="mailto:serenj.business@gmail.com">Say hello ↗</a><a href="#top">Back to top ↑</a></div></footer>
 <script>
-document.getElementById('go').onclick=function(){var v=function(i){return document.getElementById(i).value.trim()};
+document.getElementById('enquiry-form').addEventListener('submit',function(event){event.preventDefault();var v=function(i){return document.getElementById(i).value.trim()};
 if(!v('n')||!v('e')||!v('m')){alert('Please add your name, email and goals.');return}\nvar email=document.getElementById('e');if(!email.checkValidity()){email.reportValidity();email.focus();return}
 var body='Name: '+v('n')+'\nEmail: '+v('e')+'\nPhone / WhatsApp: '+(v('phone')||'Not provided')+'\nBusiness: '+v('b')+'\nService: '+v('s')+'\n\n'+v('m');
-location.href='mailto:serenj.business@gmail.com?subject='+encodeURIComponent('New enquiry from '+v('n'))+'&body='+encodeURIComponent(body)};
+location.href='mailto:serenj.business@gmail.com?subject='+encodeURIComponent('New enquiry from '+v('n'))+'&body='+encodeURIComponent(body)});
 </script>
 <a class="floating-project-cta" href="https://wa.me/18202008747?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Let’s collaborate — chat on WhatsApp"><span>LET’S COLLABORATE</span><i aria-hidden="true">↗</i></a>
-<script>
-(function(){
- var stage=document.querySelector('.sx-stage');
- var portrait=stage&&stage.querySelector('.sx-person');
- var released=false;
- function show(){if(released)return;released=true;document.documentElement.classList.remove('hero-await')}
- if(!portrait){show();return}
- if(portrait.complete){
-  if(portrait.naturalWidth){if(portrait.decode){portrait.decode().then(show,show)}else show()}
-  else show();
- }else{
-  portrait.addEventListener('load',function(){if(portrait.decode){portrait.decode().then(show,show)}else show()},{once:true});
-  portrait.addEventListener('error',show,{once:true});
- }
- // Never keep the hero hidden indefinitely on a failed or extremely slow connection.
- setTimeout(show,4500);
-})();
-</script>
+
 </body>
 </html>
