@@ -1161,3 +1161,9 @@ img,svg{max-width:100%}
 @keyframes sxStreakFlow{to{stroke-dashoffset:-1000}}
 @media(max-width:760px){.sx-stage .sx-growth-streaks .sx-growth-flow{stroke-width:4!important}}
 @media(prefers-reduced-motion:reduce){.sx-stage .sx-growth-streaks .sx-growth-flow{animation:none!important;opacity:0!important}}
+
+/* Position-only adjustment: raise the graph without changing its shape, animation, or layering. */
+.sx-stage .sx-growth{top:5%!important;z-index:1!important}
+@media(min-width:761px) and (max-width:1100px){.sx-stage .sx-growth{top:9%!important}}
+@media(max-width:760px){.sx-stage .sx-growth{top:22%!important}}
+@media(max-width:380px){.sx-stage .sx-growth{top:24%!important}}
