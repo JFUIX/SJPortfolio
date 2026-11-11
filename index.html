@@ -309,13 +309,23 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 .hero-depth h1 .hero-word:nth-child(2){position:relative!important;z-index:5!important}
 .hero-depth .hero-figure{z-index:2!important}
 
-/* Align DIGITAL at the left and MARKETING at the right on one horizontal line. */
-.hero-depth h1{display:flex!important;flex-direction:row!important;align-items:baseline!important;justify-content:space-between!important;gap:12px!important;white-space:nowrap!important;font-size:clamp(36px,6.5vw,104px)!important;padding:0 1.5%!important;box-sizing:border-box!important}
-.hero-depth h1 .hero-word{display:inline-block!important;flex:0 0 auto!important;transform:none!important;top:auto!important}
-.hero-depth h1 .hero-word:first-child{text-align:left!important}
-.hero-depth h1 .hero-word:nth-child(2){text-align:right!important}
-@media(max-width:700px){.hero-depth h1{font-size:clamp(21px,5.9vw,42px)!important;gap:5px!important;padding:0 1%!important}}
-@media(max-width:390px){.hero-depth h1{font-size:5.8vw!important}}
+/* Refined editorial hero: balanced type, portrait depth, and generous breathing room. */
+.hero-depth-stage{min-height:820px!important;overflow:hidden!important;background:radial-gradient(ellipse at 50% 55%,rgba(224,209,187,.27),transparent 66%)!important}
+.hero-depth-back{opacity:.055!important;top:19%!important}
+.hero-depth .hero-copy{position:static!important;z-index:auto!important;padding:0!important;display:block!important;width:100%!important;text-align:center!important;pointer-events:none}
+.hero-depth .hero-script{position:absolute!important;top:58px!important;left:0!important;right:0!important;transform:none!important;margin:0!important;z-index:7!important;font-size:clamp(50px,5vw,72px)!important}
+.hero-depth .hero-intro{position:absolute!important;top:140px!important;left:0!important;right:0!important;margin:0!important;z-index:7!important}
+.hero-depth h1{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;display:block!important;z-index:auto!important;isolation:auto!important;pointer-events:none!important;font-family:'Barlow Condensed',Impact,sans-serif!important;font-size:clamp(80px,11vw,160px)!important;line-height:.9!important;letter-spacing:.01em!important}
+.hero-depth h1 .hero-word{position:absolute!important;display:block!important;width:max-content!important;max-width:96%!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;margin:0!important;padding:0!important;transform:none!important;animation:none!important;white-space:nowrap!important;font-size:1em!important;font-weight:900!important;letter-spacing:.01em!important;color:var(--ink)!important;text-shadow:none!important}
+.hero-depth h1 .hero-word:first-child{top:255px!important;left:3%!important;z-index:1!important}
+.hero-depth h1 .hero-word:nth-child(2){top:500px!important;right:3%!important;z-index:5!important;font-size:.93em!important}
+.hero-depth h1 .headline-folder{width:.22em!important;vertical-align:baseline!important}
+.hero-depth .hero-figure{z-index:2!important;width:min(47%,510px)!important;bottom:85px!important;left:50%!important;transform:translateX(-50%)!important}
+.hero-depth .hero-portrait{height:650px!important;object-position:center bottom!important}
+.hero-depth .hero-description{position:absolute!important;z-index:7!important;bottom:20px!important;left:50%!important;transform:translateX(-50%)!important;margin:0!important;width:min(90%,560px)!important;max-width:560px!important;padding:10px 14px!important;background:rgba(246,240,231,.88)!important;line-height:1.55!important;text-align:center!important}
+@media(max-width:900px){.hero-depth-stage{min-height:740px!important}.hero-depth h1{font-size:clamp(68px,10.5vw,100px)!important}.hero-depth h1 .hero-word:first-child{top:235px!important}.hero-depth h1 .hero-word:nth-child(2){top:465px!important}.hero-depth .hero-figure{width:min(60%,460px)!important;bottom:80px!important}.hero-depth .hero-portrait{height:580px!important}}
+@media(max-width:700px){.hero-depth-stage{min-height:680px!important}.hero-depth .hero-script{top:30px!important;font-size:49px!important}.hero-depth .hero-intro{top:95px!important;font-size:9px!important}.hero-depth h1{font-size:clamp(47px,12vw,76px)!important}.hero-depth h1 .hero-word:first-child{top:170px!important;left:3%!important}.hero-depth h1 .hero-word:nth-child(2){top:410px!important;right:3%!important;font-size:.9em!important}.hero-depth .hero-figure{width:min(88%,390px)!important;bottom:85px!important}.hero-depth .hero-portrait{height:490px!important}.hero-depth .hero-description{bottom:12px!important;font-size:12px!important;width:94%!important}}
+@media(max-width:390px){.hero-depth-stage{min-height:640px!important}.hero-depth h1{font-size:11.8vw!important}.hero-depth h1 .hero-word:nth-child(2){top:385px!important}.hero-depth .hero-portrait{height:450px!important}}
 </style>
 <link rel="preload" as="image" href="./assets/seren-cutout.png">
 </head>
