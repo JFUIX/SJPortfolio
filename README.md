@@ -1,8 +1,8 @@
 # SJPortfolio
 
-A responsive, single-page digital marketing portfolio showcasing creative strategy, social media, paid advertising, search visibility, selected work, and a contact enquiry flow.
+Seren J’s responsive, single-page digital marketing portfolio showcasing creative strategy, social media, paid advertising, search visibility, selected work, and a contact enquiry flow.
 
-**Live website:** https://jfuix.github.io/MarketingPortfolio/
+**Live website:** https://jfuix.github.io/SJPortfolio/
 
 ## Features
 
@@ -25,12 +25,13 @@ A responsive, single-page digital marketing portfolio showcasing creative strate
 ## Project structure
 
 ```text
-MarketingPortfolio/
+SJPortfolio/
 ├── index.html   # Page markup, styles, and contact-form script
+├── assets/      # Portfolio images and media
 └── README.md    # Project documentation
 ```
 
-The hero portrait is embedded in the HTML, so the source file is larger than a typical standalone page.
+Portfolio images, including the hero portrait, are stored in the `assets/` directory.
 
 ## Run locally
 
