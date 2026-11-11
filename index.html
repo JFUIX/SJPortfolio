@@ -700,6 +700,23 @@ footer .logo b{color:#ed3c29!important}
 @media(max-width:640px){.floating-project-cta{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));min-height:52px;padding:7px 7px 7px 15px;font-size:11px;gap:9px}.floating-project-cta i{width:36px;height:36px}}
 @media(prefers-reduced-motion:reduce){.floating-project-cta{transition:none}}
 
+
+/* Portrait breathing room and subtle realistic cutout shadow */
+.sx-person{
+ bottom:clamp(28px,4vw,56px)!important;
+ height:calc(91% - 45px)!important;
+ filter:drop-shadow(7px 14px 12px rgba(25,20,18,.16))!important;
+}
+@media(max-width:900px){
+ .sx-person{bottom:36px!important;height:calc(85% - 36px)!important}
+}
+@media(max-width:640px){
+ .sx-person{bottom:calc(145px + 26px)!important;height:calc(390px - 26px)!important;filter:drop-shadow(5px 10px 9px rgba(25,20,18,.15))!important}
+}
+@media(max-width:380px){
+ .sx-person{bottom:calc(143px + 24px)!important;height:calc(355px - 24px)!important}
+}
+
 </style>
 </head>
 <body>
