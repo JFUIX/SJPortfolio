@@ -788,6 +788,21 @@ footer .logo b{color:#ed3c29!important}
 @media(max-width:900px){.testimonial-number{min-height:85px!important}.principle-word{font-size:clamp(33px,5.2vw,55px)!important}}
 @media(max-width:640px){.testimonial-number{min-height:75px!important;gap:12px!important;margin-bottom:18px!important}.principle-word{font-size:clamp(39px,10vw,58px)!important}}
 
+
+/* Accessible click-to-reveal contact details */
+.contact-reveal{margin-top:26px;max-width:360px;border:0!important}
+.contact-reveal summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:52px;padding:13px 18px;background:#111;color:#fff;cursor:pointer;font:800 12px/1.3 Archivo,Arial,sans-serif;letter-spacing:.08em;transition:background .2s}
+.contact-reveal summary::-webkit-details-marker{display:none}
+.contact-reveal summary:hover,.contact-reveal[open] summary{background:#174bc0}
+.contact-reveal summary:focus-visible{outline:3px solid #111;outline-offset:3px}
+.contact-reveal summary span{font-size:22px;font-weight:400;line-height:1;transition:transform .2s}
+.contact-reveal[open] summary span{transform:rotate(45deg)}
+.contact-reveal-links{display:flex;flex-direction:column;gap:0;background:#f2efe9;border:1px solid #111;border-top:0}
+.contact-reveal-links a{display:block;padding:15px 16px;color:#111!important;font:700 13px/1.5 Inter,Arial,sans-serif;text-decoration:none!important;overflow-wrap:anywhere}
+.contact-reveal-links a+a{border-top:1px solid #d3cec7}
+.contact-reveal-links a:hover,.contact-reveal-links a:focus-visible{background:#e4d6c5;color:#174bc0!important}
+@media(prefers-reduced-motion:reduce){.contact-reveal summary,.contact-reveal summary span{transition:none}}
+
 </style>
 </head>
 <body>
@@ -845,7 +860,7 @@ footer .logo b{color:#ed3c29!important}
 <details><summary>What does working together cost?</summary><p>It depends on scope. Tell us your goals and we’ll send a clear quote.</p></details>
 <details><summary>Can you guarantee the same results for my brand?</summary><p>No one can promise identical results. We can promise a clear plan, honest reporting and steady testing.</p></details></div></div></section>
 
-<section id="contact" class="cta"><div class="w g"><div><p class="tag" style="color:#f2b8a2">Your next chapter starts here</p><h2>Ready for your next big thing?</h2><p style="max-width:300px;margin-top:24px">Tell us what you do and what you want to grow. Let’s build a plan that fits your business.</p><a class="em" href="mailto:serenj.business@gmail.com">serenj.business@gmail.com ↗</a><a href="https://wa.me/18202008747" style="font-size:13px">Chat on WhatsApp · +1 820 200 8747 ↗</a></div>
+<section id="contact" class="cta"><div class="w g"><div><p class="tag" style="color:#f2b8a2">Your next chapter starts here</p><h2>Ready for your next big thing?</h2><p style="max-width:300px;margin-top:24px">Tell us what you do and what you want to grow. Let’s build a plan that fits your business.</p><details class="contact-reveal"><summary>DIRECT CONTACT <span aria-hidden="true">+</span></summary><div class="contact-reveal-links"><a href="mailto:serenj.business@gmail.com">serenj.business@gmail.com ↗</a><a href="https://wa.me/18202008747" target="_blank" rel="noopener noreferrer">Chat on WhatsApp · +1 820 200 8747 ↗</a></div></details></div>
 <div class="fm"><label>Your name *<input id="n" placeholder="Let’s get acquainted"></label><label>Your email *<input id="e" type="email" placeholder="you@yourbrand.com"></label>
 <label class="f">Business / website<input id="b" placeholder="Tell us who you are"></label>
 <label class="f">What can we help with?<select id="s"><option>Let’s figure it out together</option><option>Social &amp; content</option><option>Paid advertising</option><option>SEO &amp; websites</option><option>Strategy &amp; automation</option></select></label>
