@@ -110,6 +110,68 @@ footer .w{gap:22px;font-size:11px;line-height:1.8}
 }
 @media(max-width:520px){.hero-action-message strong{font-size:25px}.hero-action-band .hero-actions{flex-wrap:wrap;gap:12px}.hero-action-band .hero-actions .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){.mq div,.testimonial-card,.case-feature,.case-tile,.case-cta,.btn{animation:none!important;transition:none!important}}
+
+/* Responsive readability and theme QA — preserve existing art direction */
+html,body{max-width:100%;overflow-x:clip}
+img{max-width:100%}
+.sx-stage{width:100%}
+.sx-giant{max-width:100%;font-size:clamp(70px,12.2vw,188px);letter-spacing:0}
+.sx-foot{font-size:11px;letter-spacing:.12em}
+.tag,.case-kicker,.case-visual-foot,.testimonial-number{font-size:max(11px,1em)}
+.service-strip{border-bottom-color:var(--line)}
+@media(prefers-color-scheme:dark){
+ :root:not([data-theme="light"]) .service-strip{border-bottom-color:var(--line)}
+ :root:not([data-theme="light"]) .testimonial-section{color:var(--ink)}
+ :root:not([data-theme="light"]) .case-studies .tag{color:var(--mut)}
+}
+:root[data-theme="dark"] .service-strip{border-bottom-color:var(--line)}
+:root[data-theme="dark"] .testimonial-section{color:var(--ink)}
+:root[data-theme="dark"] .case-studies .tag{color:var(--mut)}
+@media(min-width:761px) and (max-width:1100px){
+ .sx-title{font-size:clamp(30px,3.6vw,42px)}
+ .sx-giant{font-size:clamp(78px,11.7vw,130px)}
+ .sx-info{right:24px;width:min(245px,28%)}
+}
+@media(max-width:760px){
+ .sx-stage{height:auto;min-height:780px;padding-bottom:0}
+ .sx-tag{font-size:11px}
+ .sx-title{font-size:clamp(31px,8vw,42px);line-height:1.08;max-width:calc(100% - 40px)}
+ .sx-person{height:clamp(360px,105vw,480px);bottom:166px;width:100%;max-width:560px}
+ .sx-ground{bottom:162px}
+ .sx-giant{top:clamp(290px,77vw,365px);font-size:clamp(66px,22vw,165px);line-height:.82}
+ .sx-info{bottom:18px}
+ .sx-info p{font-size:14px;line-height:1.55}
+ .sx-foot{display:none}
+ .sx-actions{gap:14px}
+ .sx-btn,.sx-link{font-size:13px}
+ .case-visual-title{overflow-wrap:anywhere}
+ .testimonial-heading>p{max-width:100%}
+}
+@media(max-width:390px){
+ .w{padding-left:20px;padding-right:20px}
+ .sx-stage{min-height:745px}
+ .sx-title{top:58px;font-size:32px}
+ .sx-person{height:390px;bottom:172px}
+ .sx-ground{bottom:168px}
+ .sx-giant{top:305px;font-size:21.5vw}
+ .sx-info{left:20px;right:20px}
+ .sx-info p{font-size:13px}
+ .case-body,.case-tile-body{padding:22px}
+ .case-visual{padding:22px}
+ .case-metrics{gap:18px}
+ .case-metrics strong{font-size:26px}
+ .fm{padding:22px 16px}
+}
+@media(max-width:340px){
+ .sx-title{font-size:29px}
+ .sx-giant{font-size:21vw}
+ .sx-actions{gap:10px}
+ .sx-btn{font-size:12px}
+ .sx-link{font-size:12px}
+ .logo{font-size:26px}
+ nav>.btn{padding:10px;font-size:10px}
+}
+
 </style>
 </head>
 <body>
