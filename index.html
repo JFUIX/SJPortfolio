@@ -803,6 +803,58 @@ footer .logo b{color:#ed3c29!important}
 .contact-reveal-links a:hover,.contact-reveal-links a:focus-visible{background:#e4d6c5;color:#174bc0!important}
 @media(prefers-reduced-motion:reduce){.contact-reveal summary,.contact-reveal summary span{transition:none}}
 
+
+/* Editorial density pass: reduce dead space without sacrificing readability */
+@media(min-width:901px){
+ section:not(.sx):not(.cta){padding-top:clamp(46px,4.5vw,66px);padding-bottom:clamp(46px,4.5vw,66px)}
+ .case-studies{padding-top:55px!important;padding-bottom:60px!important}
+ .top{margin-bottom:24px!important;gap:18px!important}
+ .top h2{margin-bottom:0!important}
+ .nums>div{padding-top:19px!important;padding-bottom:19px!important}
+ .case-grid{margin-top:22px!important;gap:20px!important}
+ .case-feature{gap:20px!important}
+ .case-visual,.case-tile .case-visual{min-height:300px!important}
+ .case-body,.case-tile-body{padding-top:14px!important;padding-bottom:10px!important}
+ .svc{padding-top:22px!important;padding-bottom:22px!important}
+ #approach{padding-top:48px!important;padding-bottom:38px!important}
+ .mk{min-height:390px!important}
+ .app>div:nth-child(2){padding:clamp(24px,3.5vw,48px)!important}
+ .steps>div{min-height:215px!important}
+ .testimonial-heading{margin-bottom:24px!important}
+ .testimonial-card{min-height:0!important}
+ .testimonial-number{min-height:88px!important;margin-bottom:18px!important}
+ .cta{padding-top:55px!important;padding-bottom:55px!important}
+}
+@media(min-width:641px) and (max-width:900px){
+ section:not(.sx):not(.cta){padding-top:46px!important;padding-bottom:46px!important}
+ .case-studies{padding-block:48px!important}
+ .top{margin-bottom:24px!important}
+ .case-visual,.case-tile .case-visual{min-height:275px!important}
+ .mk{min-height:340px!important}
+ .steps>div{min-height:205px!important}
+ .testimonial-heading{margin-bottom:22px!important}
+}
+@media(max-width:640px){
+ section:not(.sx):not(.cta){padding-top:38px!important;padding-bottom:38px!important}
+ section[style*="padding-top:0"]{padding-top:0!important}
+ .top{margin-bottom:20px!important;gap:12px!important}
+ .top h2{line-height:1.02!important}
+ .nums>div,.nums>div:first-child{padding-top:15px!important;padding-bottom:15px!important}
+ .case-studies{padding-top:40px!important;padding-bottom:42px!important}
+ .case-grid{margin-top:18px!important;gap:20px!important}
+ .case-visual,.case-tile .case-visual{min-height:255px!important}
+ .case-body,.case-tile-body{padding-top:14px!important;padding-bottom:8px!important}
+ .svc{padding-block:20px!important}
+ #approach{padding-top:38px!important;padding-bottom:28px!important}
+ .mk{min-height:280px!important}
+ .app>div:nth-child(2){padding:22px 0!important}
+ .steps>div{padding:20px!important;gap:9px!important}
+ .testimonial-heading{margin-bottom:18px!important}
+ .testimonial-card{padding:22px!important}
+ .testimonial-number{min-height:64px!important;margin-bottom:15px!important}
+ .cta{padding-top:42px!important;padding-bottom:42px!important}
+}
+
 </style>
 </head>
 <body>
