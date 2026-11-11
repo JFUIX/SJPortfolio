@@ -1121,6 +1121,19 @@ footer .logo b{color:#ed3c29!important}
 @media(max-width:380px){.sx-stage .sx-growth{top:31%!important;right:2%!important;width:94%!important;height:46%!important}}
 @media(prefers-reduced-motion:reduce){.sx-stage .sx-growth-flow{animation:none!important;opacity:0!important}.sx-stage .sx-growth-end{animation:none!important;opacity:1!important;transform:none!important}}
 
+
+/* Conceal the graph's exposed left-hand tail; retain the right-hand rise and endpoint. */
+.sx-stage .sx-growth-line,.sx-stage .sx-growth-halo,.sx-stage .sx-growth-flow{
+ clip-path:inset(0 0 0 48%)!important;
+}
+.sx-stage .sx-growth-node.node-1{display:none!important}
+@media(max-width:760px){
+ .sx-stage .sx-growth-line,.sx-stage .sx-growth-halo,.sx-stage .sx-growth-flow{
+  clip-path:inset(0 0 0 58%)!important;
+ }
+ .sx-stage .sx-growth-node.node-2{display:none!important}
+}
+
 </style>
 </head>
 <body id="top">
