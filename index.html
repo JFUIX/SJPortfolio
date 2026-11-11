@@ -250,6 +250,20 @@ img{max-width:100%}
 }
 @media(prefers-reduced-motion:reduce){.testimonial-card{animation:none!important}}
 
+
+/* Mobile hero visibility correction: keep DIGITAL fully legible */
+@media(max-width:760px){
+ .sx-giant{top:clamp(185px,28vw + 95px,245px);bottom:auto;font-size:clamp(54px,17vw,112px);line-height:.9;z-index:3}
+ .sx-giant span:first-child{position:relative;z-index:5}
+ .sx-giant span+span{margin-top:clamp(165px,42vw,250px)}
+ .sx-giant-front{display:none}
+ .sx-person{z-index:2}
+}
+@media(max-width:380px){
+ .sx-giant{top:185px;bottom:auto;font-size:17vw}
+ .sx-giant span+span{margin-top:160px}
+}
+
 </style>
 </head>
 <body>
