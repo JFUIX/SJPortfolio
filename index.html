@@ -351,6 +351,19 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 @media(max-width:760px){.seren-hero{padding:18px 22px 0}.seren-hero-inner{display:flex;flex-direction:column;gap:0;min-height:0}.seren-hero-copy{padding:42px 0 30px}.seren-hero-kicker{margin:32px 0 19px;font-size:44px}.seren-hero h1{font-size:clamp(70px,15vw,116px)}.seren-hero-summary{margin:26px 0}.seren-hero-foot{margin-top:35px;gap:10px;font-size:9px}.seren-hero-foot span+span:before{margin-right:10px}.seren-hero-art{min-height:490px}.seren-hero-art img{height:510px}.seren-art-stamp{left:3%;top:11%;width:76px;height:76px;font-size:8px}.seren-art-caption{top:10%;font-size:55px}.seren-hero-bottom{font-size:9px}}
 @media(max-width:400px){.seren-hero{padding-left:16px;padding-right:16px}.seren-hero h1{font-size:14.8vw}.seren-hero h1>span:nth-child(2){font-size:.88em}.seren-hero-art{min-height:420px}.seren-hero-art img{height:440px}.seren-hero-bottom span:nth-child(2){display:none}}
 @media(prefers-reduced-motion:reduce){.seren-hero-links a{transition:none}}
+
+/* Alternative art-directed hero: oversized typography, asymmetrical portrait, editorial sidebar. */
+.seren-v2{background:#f3ede4;color:#3e0b10;overflow:hidden;padding:0 clamp(20px,4vw,70px);font-family:Inter,Arial,sans-serif}
+.seren-v2-top,.seren-v2-bottom{max-width:1600px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:10px;letter-spacing:.14em;font-weight:750;color:#86685e}
+.seren-v2-top{padding:22px 0;border-bottom:1px solid #dacbc1}.seren-v2-bottom{padding:23px 0;border-top:1px solid #dacbc1}.seren-v2-bottom a{color:#3e0b10;text-decoration:none}
+.seren-v2-stage{max-width:1600px;margin:auto;position:relative;min-height:750px;isolation:isolate}
+.seren-v2-heading{position:absolute;left:0;top:12%;z-index:3;pointer-events:none}.seren-v2-heading p{font:italic clamp(32px,4.5vw,68px)/1 'Instrument Serif',Georgia,serif;color:#b0472c;margin:0 0 24px 5px}
+.seren-v2 h1{font:900 clamp(105px,14vw,225px)/.75 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.055em;margin:0;color:#3e0b10}.seren-v2 h1>span{color:#b44c32}.seren-v2-dot{color:#b44c32}
+.seren-v2-image{position:absolute;z-index:2;left:40%;bottom:0;width:46%;height:710px;display:flex;justify-content:center;align-items:flex-end}.seren-v2-image img{position:relative;z-index:2;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 16px 20px rgba(62,11,16,.13))}.seren-v2-halo{position:absolute;z-index:0;left:10%;right:10%;top:12%;bottom:7%;border-radius:50% 50% 8px 8px;background:#e5c9b9}
+.seren-v2-side{position:absolute;right:0;bottom:14%;width:230px;z-index:4}.seren-v2-label{font-size:10px;letter-spacing:.15em;font-weight:800;color:#aa4b36}.seren-v2-side p{font-size:16px;line-height:1.7;margin:20px 0 28px;color:#675149}.seren-v2-side a{display:flex;justify-content:space-between;color:#3e0b10;text-decoration:none;font-size:13px;font-weight:800;border-bottom:1px solid #3e0b10;padding-bottom:13px}.seren-v2-vertical{position:absolute;right:0;top:8%;writing-mode:vertical-rl;font-size:10px;letter-spacing:.18em;color:#a18b7f;font-weight:700}
+@media(max-width:1150px){.seren-v2-stage{min-height:660px}.seren-v2 h1{font-size:13vw}.seren-v2-image{height:610px;left:35%;width:53%}.seren-v2-side{width:190px;bottom:8%}.seren-v2-side p{font-size:14px}}
+@media(max-width:760px){.seren-v2-top span:nth-child(2),.seren-v2-bottom span:last-child{display:none}.seren-v2-stage{min-height:800px}.seren-v2-heading{top:7%;left:0;right:0;text-align:left}.seren-v2-heading p{font-size:40px;margin-bottom:20px}.seren-v2 h1{font-size:clamp(91px,19vw,145px)}.seren-v2-image{left:5%;width:90%;height:510px;bottom:125px}.seren-v2-halo{left:12%;right:12%}.seren-v2-side{bottom:15px;left:0;right:0;width:auto;background:#f3ede4;padding:10px 0}.seren-v2-side p{max-width:400px;margin:10px 0 15px}.seren-v2-vertical{display:none}.seren-v2-bottom{font-size:9px}}
+@media(max-width:400px){.seren-v2-stage{min-height:735px}.seren-v2 h1{font-size:18vw}.seren-v2-image{height:445px;bottom:130px}.seren-v2-heading p{font-size:34px}}
 </style>
 <link rel="preload" as="image" href="./assets/seren-cutout.png">
 </head>
@@ -358,25 +371,15 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 <header class="w"><nav><a class="logo" href="#">seren<b>✳︎</b></a><div class="nl"><a href="#work">Selected work</a><a href="#what">What we do</a><a href="#approach">The approach</a></div><a class="btn" href="#contact">Let’s talk growth ↗</a></nav></header>
 
 <main>
-<section class="seren-hero" aria-labelledby="hero-heading">
-  <div class="seren-hero-inner">
-    <div class="seren-hero-copy">
-      <div class="seren-hero-eyebrow"><span class="seren-dot"></span> INDEPENDENT CREATIVE PORTFOLIO <span class="seren-index">/ 2026</span></div>
-      <p class="seren-hero-kicker">Strategy meets imagination.</p>
-      <h1 id="hero-heading"><span>DIGITAL</span><span>MARKETING<span class="seren-period">.</span></span></h1>
-      <p class="seren-hero-summary">We turn attention into connection, and connection into growth. Distinctive content, smarter campaigns, and creative work that means business.</p>
-      <div class="seren-hero-links"><a href="#work" class="seren-primary">Explore the work <span aria-hidden="true">↗</span></a><a href="#contact" class="seren-secondary">Start a conversation <span aria-hidden="true">↗</span></a></div>
-      <div class="seren-hero-foot"><span>CONTENT</span><span>PAID MEDIA</span><span>BRAND GROWTH</span></div>
-    </div>
-    <div class="seren-hero-art">
-      <span class="seren-art-arc" aria-hidden="true"></span>
-      <span class="seren-art-caption" aria-hidden="true">IDEAS THAT<br>MOVE PEOPLE.</span>
-      <img src="./assets/seren-cutout.png" alt="Seren seated in a modern chair holding a laptop" width="1024" height="1536" fetchpriority="high" decoding="async">
-      <div class="seren-art-stamp"><span>CREATIVE<br>THINKING</span><span class="seren-stamp-star">✳</span></div>
-      <span class="seren-art-number" aria-hidden="true">01 / 04</span>
-    </div>
-  </div>
-  <div class="seren-hero-bottom"><span>SCROLL TO EXPLORE</span><span>MADE FOR BRANDS GOING PLACES <span aria-hidden="true">↘</span></span></div>
+<section class="seren-v2" aria-labelledby="hero-heading">
+<div class="seren-v2-top"><span>THE CREATIVE PORTFOLIO / 2026</span><span>STRATEGY · CONTENT · PERFORMANCE</span></div>
+<div class="seren-v2-stage">
+<div class="seren-v2-heading"><p>Not just seen. <em>Remembered.</em></p><h1 id="hero-heading">MAKE <span>IT</span><br>MATTER<span class="seren-v2-dot">.</span></h1></div>
+<div class="seren-v2-image"><div class="seren-v2-halo"></div><img src="./assets/seren-cutout.png" alt="Seren seated in a chrome chair holding a laptop" width="1024" height="1536" fetchpriority="high"></div>
+<div class="seren-v2-side"><span class="seren-v2-label">DIGITAL MARKETING, WITH A POINT OF VIEW</span><p>Scroll-stopping ideas. Smart campaigns. Creative that makes people feel something—and do something.</p><a href="#work">Discover the work <span>↗</span></a></div>
+<div class="seren-v2-vertical" aria-hidden="true">CREATIVE / STRATEGIC / HUMAN</div>
+</div>
+<div class="seren-v2-bottom"><span>INDEPENDENT THINKING. MEASURABLE IMPACT.</span><a href="#contact">LET'S MAKE SOMETHING GREAT ↗</a><span>SCROLL TO EXPLORE ↓</span></div>
 </section>
 <div class="mq" aria-hidden="true"><div><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span><span>Strategy with substance</span><span>✦</span><span>Content with character</span><span>✦</span><span>Campaigns that convert</span><span>✦</span><span>Growth with intention</span><span>✦</span></div></div>
 <div class="hero-action-band"><div class="w hero-action-inner"><div class="hero-action-message"><span class="tag">YOUR NEXT MOVE STARTS HERE</span><strong>Let’s make your brand impossible to ignore.</strong></div><div class="row hero-actions"><a class="btn" href="#contact">Let’s work together ↗</a><a class="lnk" href="#work">Explore selected work ↗</a></div></div></div>
