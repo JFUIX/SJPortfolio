@@ -745,6 +745,15 @@ footer .logo b{color:#ed3c29!important}
  .sx-stage::after{width:70%!important;left:17%!important;bottom:20%!important;height:8%!important;filter:blur(16px)!important}
 }
 
+
+/* Refined editorial hero signature: clear hierarchy instead of cramped slash text */
+.sx-foot{position:absolute!important;top:auto!important;bottom:clamp(80px,11%,115px)!important;right:clamp(22px,6vw,90px)!important;left:auto!important;max-width:none!important;width:auto!important;display:flex!important;flex-direction:column!important;align-items:flex-end!important;gap:8px!important;text-align:right!important;font:700 clamp(11px,1vw,14px)/1.2 Archivo,Arial,sans-serif!important;letter-spacing:.015em!important;text-transform:uppercase!important;color:#111!important;z-index:8!important}
+.sx-foot span{display:block!important;white-space:nowrap!important;padding-bottom:5px;border-bottom:1px solid rgba(17,17,17,.28)}
+.sx-foot span:last-child{color:#174bc0!important;border-bottom:2px solid #174bc0;font-weight:900!important}
+@media(max-width:900px){.sx-foot{right:22px!important;bottom:115px!important;font-size:11px!important;gap:6px!important}}
+@media(max-width:640px){.sx-foot{top:88px!important;right:18px!important;bottom:auto!important;font-size:9px!important;gap:4px!important;align-items:flex-end!important}.sx-foot span{padding-bottom:3px!important}}
+@media(max-width:380px){.sx-foot{top:93px!important;right:13px!important;font-size:8px!important}}
+
 </style>
 </head>
 <body>
@@ -760,7 +769,7 @@ footer .logo b{color:#ed3c29!important}
     <img class="sx-person" src="assets/seren-cutout.png" alt="Seren standing with a laptop, transparent portrait" width="898" height="1122" fetchpriority="high" decoding="async">
     <div class="sx-giant sx-giant-front" aria-hidden="true"><span>DIGITAL</span> <span>MARKETING</span></div>
     <div class="sx-giant sx-giant-outline" aria-hidden="true"><span>DIGITAL</span> <span><em>MAR</em>KETING</span></div>
-    <span class="sx-foot">BOLD IDEAS / SMART STRATEGY / REAL IMPACT</span>
+    <span class="sx-foot"><span>Bold ideas</span><span>Smart strategy</span><span>Real impact</span></span>
     <div class="sx-info"><p>Content that connects. Campaigns that convert. Creative thinking that moves brands forward.</p><div class="sx-actions"><a class="sx-btn" href="#work"><i>↗</i>Explore the work</a><a class="sx-link" href="#contact">Let’s talk</a></div></div>
   </div>
 </section>
