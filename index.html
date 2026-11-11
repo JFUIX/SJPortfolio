@@ -374,42 +374,36 @@ footer{padding:30px 0}footer .w{gap:22px;font-size:11px;line-height:1.8}footer .
 @media(max-width:760px){.seren-v3-meta{font-size:9px}.seren-v3-meta span:nth-child(2){display:none}.seren-v3-grid{display:flex;flex-direction:column;gap:35px;padding:25px 0 35px}.seren-v3-overline{margin:20px 0}.seren-v3 h1{font-size:clamp(90px,20vw,145px)}.seren-v3-lower{flex-direction:row;align-items:center;flex-wrap:wrap}.seren-v3-frame{height:550px;min-height:0;flex:none;border-radius:130px 130px 3px 3px}.seren-v3-side-note{padding-top:17px}.seren-v3-bottom{flex-wrap:wrap;gap:10px 15px;font-size:9px}.seren-v3-scroll{width:100%;margin-left:0}}
 @media(max-width:400px){.seren-v3 h1{font-size:20vw}.seren-v3-frame{height:445px}.seren-v3-side-note a{width:100%}}
 
-/* Final hero — original layered editorial concept, refined and responsive. */
+/* FINAL HERO: one authoritative set of styles, no competing overrides. */
 .seren-final{background:#f6f0e7;color:#3e0b10;overflow:hidden;padding:0 clamp(20px,4vw,72px);font-family:Inter,Arial,sans-serif}
-.seren-final-inner{max-width:1540px;margin:0 auto}.seren-final-top{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid #dfd0c5;font:750 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.16em;color:#866c62}.seren-final-top b{color:#ad4c36;margin:0 8px}
-.seren-final-stage{height:760px;position:relative;isolation:isolate;overflow:hidden}.seren-final-intro{position:absolute;top:42px;left:0;z-index:6}.seren-final-intro>span{font:750 10px Inter,Arial,sans-serif;letter-spacing:.16em;color:#9a7163}.seren-final-intro p{font:italic clamp(29px,3vw,45px)/1.04 'Instrument Serif',Georgia,serif;color:#a6442c;margin:15px 0 0}.seren-final-intro em{font-weight:400}
-.seren-final h1{position:absolute;inset:0;z-index:auto;margin:0;pointer-events:none;font-family:'Barlow Condensed',Impact,sans-serif;font-weight:900;letter-spacing:-.035em;color:#3e0b10}.seren-final h1>span{position:absolute;display:block;white-space:nowrap;line-height:.82;font-weight:900}.seren-final-digital{font-size:clamp(150px,19vw,300px);top:210px;left:0;z-index:1;opacity:.95}.seren-final-marketing{font-size:clamp(112px,14vw,210px);bottom:84px;right:0;z-index:5;text-shadow:0 2px 14px rgba(246,240,231,.55)}.seren-final-period{color:#ae472f}
-.seren-final-halo{position:absolute;z-index:0;left:35%;width:38%;aspect-ratio:1;border-radius:50%;top:160px;background:radial-gradient(circle,#e7c9b7 0%,rgba(231,201,183,.4) 57%,transparent 72%)}
+.seren-final-inner{max-width:1540px;margin:0 auto}
+.seren-final-top{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid #dfd0c5;font:750 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.16em;color:#866c62}
+.seren-final-top b{color:#ad4c36;margin:0 8px}
+.seren-final-stage{height:760px;position:relative;isolation:isolate;overflow:hidden;text-align:center}
+.seren-final-intro{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:max-content;max-width:85%;text-align:center;z-index:6}
+.seren-final-intro>span{font:750 10px Inter,Arial,sans-serif;letter-spacing:.16em;color:#9a7163}
+.seren-final-intro p{font:italic clamp(29px,3vw,45px)/1.04 'Instrument Serif',Georgia,serif;color:#a6442c;margin:15px 0 0}
+.seren-final-intro em{font-weight:400}
+.seren-final h1{position:absolute;inset:0;z-index:auto;margin:0;pointer-events:none;font-family:'Barlow Condensed',Impact,sans-serif;font-weight:900;color:#3e0b10;text-align:center}
+.seren-final h1>span{position:absolute;display:block;white-space:nowrap;line-height:.82;font-weight:900;left:50%;right:auto;transform:translateX(-50%)}
+.seren-final-digital{font-size:clamp(104px,14.5vw,220px);top:235px;z-index:1;letter-spacing:.015em;text-shadow:0 3px 9px rgba(47,13,18,.15),0 10px 22px rgba(47,13,18,.06)}
+.seren-final-marketing{font-size:clamp(88px,11.7vw,178px);bottom:138px;z-index:5;letter-spacing:.005em;text-shadow:0 3px 9px rgba(47,13,18,.17),0 11px 23px rgba(47,13,18,.07)}
+.seren-final-period{color:#ae472f}
+.seren-final-halo{position:absolute;z-index:0;left:50%;transform:translateX(-50%);width:38%;aspect-ratio:1;border-radius:50%;top:160px;background:radial-gradient(circle,#e7c9b7 0%,rgba(231,201,183,.4) 57%,transparent 72%)}
 .seren-final-person{position:absolute;z-index:2;left:50%;transform:translateX(-50%);bottom:0;height:685px;width:min(52%,600px);object-fit:contain;object-position:center bottom;filter:drop-shadow(0 15px 20px rgba(62,11,16,.11))}
 .seren-final-vertical{position:absolute;right:0;top:40px;writing-mode:vertical-rl;font:750 10px Inter,Arial,sans-serif;letter-spacing:.2em;color:#a87d70;z-index:6}
-.seren-final-note{position:absolute;left:0;bottom:80px;z-index:6;max-width:215px}.seren-final-note span{font:800 10px Inter,Arial,sans-serif;letter-spacing:.16em;color:#a44d37}.seren-final-note p{font:400 14px/1.65 Inter,Arial,sans-serif;color:#745d54;margin:13px 0 0}
-.seren-final-bottom{display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid #dfd0c5;padding:25px 0 32px}.seren-final-bottom>div:first-child>span{font:800 10px Inter,Arial,sans-serif;letter-spacing:.15em;color:#a44d37}.seren-final-bottom p{font:500 19px/1.4 Inter,Arial,sans-serif;margin:8px 0 0}.seren-final-actions{display:flex;gap:13px;flex-wrap:wrap}.seren-final-actions a{display:flex;justify-content:space-between;gap:30px;align-items:center;padding:16px 21px;background:#3e0b10;color:#fff9f2!important;text-decoration:none;font:750 12px Inter,Arial,sans-serif}.seren-final-actions a+ a{background:transparent;color:#3e0b10!important;border:1px solid #3e0b10}
-@media(max-width:1100px){.seren-final-stage{height:670px}.seren-final-digital{font-size:19vw;top:210px}.seren-final-marketing{font-size:14vw;bottom:95px}.seren-final-person{height:590px}.seren-final-note{bottom:100px;max-width:160px}.seren-final-note p{font-size:12px}}
-@media(max-width:700px){.seren-final-top span:last-child{display:none}.seren-final-stage{height:650px}.seren-final-intro{top:28px}.seren-final-intro p{font-size:32px}.seren-final-digital{font-size:25vw;top:175px;left:0}.seren-final-marketing{font-size:18vw;bottom:155px;right:0}.seren-final-person{height:475px;width:95%;bottom:55px}.seren-final-halo{left:9%;width:82%;top:155px}.seren-final-vertical{right:0;top:24px;font-size:8px}.seren-final-note{bottom:16px;max-width:85%;background:#f6f0e7;padding:7px 0}.seren-final-note p{margin-top:5px;font-size:12px}.seren-final-bottom{align-items:flex-start;flex-direction:column}.seren-final-bottom p{font-size:17px}}
-@media(max-width:400px){.seren-final-stage{height:600px}.seren-final-digital{top:160px}.seren-final-marketing{bottom:150px}.seren-final-person{height:435px}.seren-final-actions a{padding:13px 14px;gap:13px}}
-
-/* Center-aligned original hero: symmetrical headline framing Seren. */
-.seren-final-stage{text-align:center!important}
-.seren-final-intro{left:50%!important;transform:translateX(-50%)!important;width:max-content!important;max-width:85%!important;text-align:center!important;top:30px!important}
-.seren-final h1{inset:0!important;text-align:center!important}
-.seren-final-digital{left:50%!important;right:auto!important;transform:translateX(-50%)!important;top:205px!important;font-size:clamp(110px,16vw,240px)!important;letter-spacing:.015em!important}
-.seren-final-marketing{left:50%!important;right:auto!important;transform:translateX(-50%)!important;bottom:110px!important;font-size:clamp(95px,13vw,195px)!important;letter-spacing:.005em!important}
-.seren-final-person{left:50%!important;transform:translateX(-50%)!important}
-.seren-final-halo{left:50%!important;transform:translateX(-50%)!important}
-.seren-final-note{left:2%!important;text-align:left!important}
-.seren-final-vertical{right:0!important}
-@media(max-width:700px){.seren-final-intro{top:24px!important}.seren-final-digital{top:175px!important;font-size:23vw!important}.seren-final-marketing{bottom:150px!important;font-size:17vw!important}.seren-final-note{left:0!important}}
-@media(max-width:400px){.seren-final-digital{top:165px!important}.seren-final-marketing{bottom:150px!important}}
-
-/* Subtle depth for the centered hero headline. */
-.seren-final-digital{text-shadow:0 3px 8px rgba(62,11,16,.13),0 12px 24px rgba(62,11,16,.07)!important}
-.seren-final-marketing{text-shadow:0 3px 7px rgba(62,11,16,.17),0 10px 22px rgba(62,11,16,.09)!important}
-
-/* Approved centered hero: slightly smaller, tighter typography and soft shadows. */
-.seren-final-digital{font-size:clamp(104px,14.5vw,220px)!important;top:235px!important;text-shadow:0 4px 10px rgba(47,13,18,.16),0 12px 24px rgba(47,13,18,.07)!important}
-.seren-final-marketing{font-size:clamp(88px,11.7vw,178px)!important;bottom:138px!important;text-shadow:0 4px 10px rgba(47,13,18,.19),0 12px 25px rgba(47,13,18,.09)!important}
-@media(max-width:700px){.seren-final-digital{font-size:21vw!important;top:194px!important}.seren-final-marketing{font-size:15.5vw!important;bottom:168px!important}}
-@media(max-width:400px){.seren-final-digital{top:180px!important}.seren-final-marketing{bottom:166px!important}}
+.seren-final-note{position:absolute;left:2%;bottom:80px;z-index:6;max-width:215px;text-align:left}
+.seren-final-note span{font:800 10px Inter,Arial,sans-serif;letter-spacing:.16em;color:#a44d37}
+.seren-final-note p{font:400 14px/1.65 Inter,Arial,sans-serif;color:#745d54;margin:13px 0 0}
+.seren-final-bottom{display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid #dfd0c5;padding:25px 0 32px}
+.seren-final-bottom>div:first-child>span{font:800 10px Inter,Arial,sans-serif;letter-spacing:.15em;color:#a44d37}
+.seren-final-bottom p{font:500 19px/1.4 Inter,Arial,sans-serif;margin:8px 0 0}
+.seren-final-actions{display:flex;gap:13px;flex-wrap:wrap}
+.seren-final-actions a{display:flex;justify-content:space-between;gap:30px;align-items:center;padding:16px 21px;background:#3e0b10;color:#fff9f2!important;text-decoration:none;font:750 12px Inter,Arial,sans-serif}
+.seren-final-actions a+a{background:transparent;color:#3e0b10!important;border:1px solid #3e0b10}
+@media(max-width:1100px){.seren-final-stage{height:670px}.seren-final-digital{font-size:14.5vw;top:235px}.seren-final-marketing{font-size:11.7vw;bottom:138px}.seren-final-person{height:590px}.seren-final-note{bottom:100px;max-width:160px}.seren-final-note p{font-size:12px}}
+@media(max-width:700px){.seren-final-top span:last-child{display:none}.seren-final-stage{height:650px}.seren-final-intro{top:24px}.seren-final-intro p{font-size:32px}.seren-final-digital{font-size:21vw;top:194px}.seren-final-marketing{font-size:15.5vw;bottom:168px}.seren-final-person{height:475px;width:95%;bottom:55px}.seren-final-halo{width:82%;top:155px}.seren-final-vertical{top:24px;font-size:8px}.seren-final-note{left:0;bottom:16px;max-width:85%;background:#f6f0e7;padding:7px 0}.seren-final-note p{margin-top:5px;font-size:12px}.seren-final-bottom{align-items:flex-start;flex-direction:column}.seren-final-bottom p{font-size:17px}}
+@media(max-width:400px){.seren-final-stage{height:600px}.seren-final-digital{top:180px}.seren-final-marketing{bottom:166px}.seren-final-person{height:435px}.seren-final-actions a{padding:13px 14px;gap:13px}}
 </style>
 <link rel="preload" as="image" href="./assets/seren-cutout.png">
 </head>
