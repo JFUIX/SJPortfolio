@@ -6,6 +6,7 @@
 <meta name="description" content="Seren’s digital marketing portfolio: creative strategy, social media, paid advertising, SEO, and measurable growth.">
 <meta name="theme-color" content="#f6f0e7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="image" href="assets/seren-cutout.png" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <title>Seren | Digital marketing. Big brand energy.</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -1122,32 +1123,6 @@ footer .logo b{color:#ed3c29!important}
 @media(prefers-reduced-motion:reduce){.sx-stage .sx-growth-flow{animation:none!important;opacity:0!important}.sx-stage .sx-growth-end{animation:none!important;opacity:1!important;transform:none!important}}
 
 
-/* Conceal the graph's exposed left-hand tail; retain the right-hand rise and endpoint. */
-.sx-stage .sx-growth-line,.sx-stage .sx-growth-halo,.sx-stage .sx-growth-flow{
- clip-path:inset(0 0 0 48%)!important;
-}
-.sx-stage .sx-growth-node.node-1{display:none!important}
-@media(max-width:760px){
- .sx-stage .sx-growth-line,.sx-stage .sx-growth-halo,.sx-stage .sx-growth-flow{
-  clip-path:inset(0 0 0 58%)!important;
- }
- .sx-stage .sx-growth-node.node-2{display:none!important}
-}
-
-
-/* Graph emerges from behind the subject, never from the left side.
-   Crop the line to the right-hand portion of the chart, behind the portrait. */
-.sx-stage .sx-growth-line,
-.sx-stage .sx-growth-halo,
-.sx-stage .sx-growth-flow{clip-path:inset(0 0 0 59%)!important}
-.sx-stage .sx-growth{isolation:isolate}
-@media(max-width:760px){
- .sx-stage .sx-growth-line,
- .sx-stage .sx-growth-halo,
- .sx-stage .sx-growth-flow{clip-path:inset(0 0 0 63%)!important}
-}
-
-
 /* FIX: Do not clip the SVG path. Its first segment is physically behind
    the foreground portrait, so the line emerges with a natural 3D occlusion. */
 .sx-stage .sx-growth-line,
@@ -1161,6 +1136,28 @@ footer .logo b{color:#ed3c29!important}
  .sx-stage .sx-growth-halo,
  .sx-stage .sx-growth-flow{clip-path:none!important}
  .sx-stage .sx-person{z-index:4!important}
+}
+
+
+/* Rendering optimizations without changing the portfolio layout. */
+@media(prefers-reduced-motion:no-preference){
+ .sx-stage .sx-growth-halo{animation:none!important;stroke-dasharray:none!important;stroke-dashoffset:0!important}
+ .sx-stage .sx-growth-node{animation:none!important;filter:none!important}
+ .sx-stage .sx-growth-end{animation:sxEndpointOpacity 2.1s ease-in-out 3.4s infinite!important}
+}
+@keyframes sxEndpointOpacity{0%,100%{opacity:.65}50%{opacity:1}}
+@supports(content-visibility:auto){
+ .case-studies,.testimonial-section,#what,#approach{content-visibility:auto;contain-intrinsic-size:auto 850px}
+}
+@media(max-width:760px){
+ @supports(content-visibility:auto){
+  .case-studies,.testimonial-section,#what,#approach{contain-intrinsic-size:auto 1100px}
+ }
+ .sx-stage .sx-growth-flow{filter:none!important;stroke-width:5!important}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ .sx-stage .sx-growth-flow{animation:none!important;opacity:0!important}
 }
 
 </style>
