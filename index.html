@@ -445,6 +445,33 @@ footer .logo b{color:#f23b23!important}
 }
 @media(prefers-reduced-motion:reduce){.mq div{animation:none!important}}
 
+
+/* Typography refresh — expressive editorial serif + modern geometric sans */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800;900&display=swap');
+body{font-family:'DM Sans',sans-serif;letter-spacing:-.015em}
+h1,h2,h3,.logo{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-.045em}
+h2,h2 em,h1 em{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-.05em}
+h2 em,h1 em{font-style:italic}
+h2{line-height:1.08}
+.logo{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.07em}
+.sx-title{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-.05em;line-height:1.08}
+.sx-giant{font-family:'Playfair Display',Georgia,serif;font-weight:800;letter-spacing:-.075em;line-height:.94}
+.sx-giant span+span{letter-spacing:-.075em}
+.hero-action-message strong{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-.045em;line-height:1.15}
+.nums b{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-.055em}
+.case-visual-title,.case-visual-title em{font-family:'Playfair Display',Georgia,serif;font-weight:800;letter-spacing:-.055em;line-height:1.02}
+.case-body h3,.case-tile h3{font-family:'Playfair Display',Georgia,serif;line-height:1.12}
+.svc h3,.steps h3{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.045em}
+.mk h3{font-family:'Playfair Display',Georgia,serif;font-weight:800;letter-spacing:-.07em;line-height:.98}
+.tag,.nl,.btn,.case-kicker,.case-visual-foot,.sx-tag,.sx-foot,.sx-btn,.sx-link{font-family:'Manrope',sans-serif;letter-spacing:.055em}
+.testimonial-card p{font-family:'DM Sans',sans-serif}
+@media(max-width:640px){
+ .sx-title{font-size:clamp(23px,6.6vw,34px);line-height:1.06}
+ .sx-giant{font-size:clamp(37px,10.6vw,66px);line-height:.94}
+ .sx-giant span+span{font-size:.68em}
+ .mk h3{font-size:clamp(57px,14vw,85px)}
+}
+
 </style>
 </head>
 <body>
