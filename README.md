@@ -4,6 +4,12 @@ Seren J’s responsive, single-page digital marketing portfolio showcasing creat
 
 **Live website:** https://jfuix.github.io/SJPortfolio/
 
+## Portfolio preview
+
+<a href="https://jfuix.github.io/SJPortfolio/">
+  <img src="screenshots/portfolio-preview.png" width="100%" alt="SJPortfolio digital marketing website screenshot with portrait removed">
+</a>
+
 ## Features
 
 - Editorial hero with layered typography and a portrait
